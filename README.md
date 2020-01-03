@@ -6,5 +6,5 @@
 
 |Command|Description|
 |------|------|
-|shell```pwd```|Where am I?|
-|ls|List files and directory| 
+|```pwd```|Where am I?|
+|```ls```|List files and directory| 
