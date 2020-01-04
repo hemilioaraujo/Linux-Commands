@@ -39,3 +39,13 @@
 |```cat <file>```|Shows the file contents.|
 |```less <file>```|Shows the file contents.|
 
+## History
+
+|Command|Description|
+|------|------|
+|```history```|Shows commands history.|
+|```Ctrl + r```|Start the interactive search on history or find the next occurrence when the interactive search has already started.|
+|```!n```|Execute the command number 'n'.|
+|```!!```|Repeat the last command.|
+|```!<string>```|Repeat the last command that starts with 'string'.|
+|```dirs -p```|Shows the history of visited directories.|
