@@ -49,3 +49,9 @@
 |```!!```|Repeat the last command.|
 |```!<string>```|Repeat the last command that starts with 'string'.|
 |```dirs -p```|Shows the history of visited directories.|
+
+## Varieties
+
+|Command|Description|
+|------|------|
+|```diff -qr <diretory1> <diretory2>```|Shows the differences between the directories. Argument ```-q``` shows modified or nonexistent files. Argument ```-r``` shows the differences between files content.|
