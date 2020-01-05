@@ -50,8 +50,15 @@
 |```!<string>```|Repeat the last command that starts with 'string'.|
 |```dirs -p```|Shows the history of visited directories.|
 
+## Permissions
+
+|Command|Description|
+|------|------|
+|```chmod xxx <file or directory>```|chmod changes the permissions of user, group or everyone to read, write or run the file.|
+
 ## Varieties
 
 |Command|Description|
 |------|------|
 |```diff -qr <diretory1> <diretory2>```|Shows the differences between the directories. Argument ```-q``` shows modified or nonexistent files. Argument ```-r``` shows the differences between files content.|
+|```man <command>```|Page of Manual of commands.|
