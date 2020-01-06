@@ -62,3 +62,4 @@
 |------|------|
 |```diff -qr <diretory1> <diretory2>```|Shows the differences between the directories. Argument ```-q``` shows modified or nonexistent files. Argument ```-r``` shows the differences between files content.|
 |```man <command>```|Page of Manual of commands.|
+|```whoami```|Who am i? Shows you username.|
