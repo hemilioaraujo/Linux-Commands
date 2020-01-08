@@ -37,7 +37,8 @@
 |```rm <file>```|Remove file.|
 |```rm -r <directory>```|Remove directory.|
 |```cat <file>```|Shows the file contents.|
-|```less <file>```|Shows the file contents.|
+|```more <file>```|Shows the file contents. Load all file on memory at one go.|
+|```less <file>```|Shows the file contents. Load the file using streams, this means that the command load just the necessary part of file.(Can use vim's commands)|
 
 ## History
 
