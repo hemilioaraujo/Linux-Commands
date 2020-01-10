@@ -58,6 +58,7 @@
 |Command|Description|
 |------|------|
 |```chmod xxx <file or directory>```|chmod changes the permissions of user, group or everyone to read, write or run the file.|
+|```chmod -R xxx <directory>```|Changes the permissions of all files and directories that are in the directory recursively.|
 
 This command uses a string that represents the permissions.
 
