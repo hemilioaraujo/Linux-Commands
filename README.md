@@ -59,6 +59,25 @@
 |------|------|
 |```chmod xxx <file or directory>```|chmod changes the permissions of user, group or everyone to read, write or run the file.|
 
+This command uses a string that represents the permissions.
+
+![ inserir explicação aqui ][permissions]
+
+* __( r )__ read permitted.
+
+* __( w )__ write permitted.
+
+* __( x )__ execution permitted.
+
+### Exemples
+
+|||
+|------|------|
+|```chmod 111 <file>```|Everyone could execute the file.|
+|```chmod 222 <file>```|Everyone could write to the file.|
+|```chmod 700 <file>```|Only the owner has all the permissions.|
+|```chmod 600 <file>```|The owner could read and write the file.|
+
 ## Varieties
 
 |Command|Description|
@@ -66,3 +85,7 @@
 |```diff -qr <diretory1> <diretory2>```|Shows the differences between the directories. Argument ```-q``` shows modified or nonexistent files. Argument ```-r``` shows the differences between files content.|
 |```man <command>```|Page of Manual of commands.|
 |```whoami```|Who am i? Shows you username.|
+
+
+[permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsEN.PNG?raw=true
+"String representation"
