@@ -87,6 +87,19 @@ This command uses a string that represents the permissions.
 |```man <command>```|Page of Manual of commands.|
 |```whoami```|Who am i? Shows you username.|
 
+## Packet manager (apt-get)
+
+|Command|Description|
+|------|------|
+|```sudo apt-get install <package>```|Installs a package.|
+|```sudo apt-get install -f```|Finds and fixes broken packages.|
+|```sudo apt-get remove <package>```|Removes a package.|
+|```sudo apt-get update```|Verifies if exists packages repository updates.|
+|```sudo apt-get upgrade```|Verifies if exists system updates.|
+|```sudo apt-get autoremove```|Removes all obsolete and unnecessary packages.|
+|```sudo apt-get autoclean```|Cleans the packet manager cache.|
+
+
 
 [permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsEN.PNG?raw=true
 "String representation"
