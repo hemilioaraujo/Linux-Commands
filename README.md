@@ -98,8 +98,7 @@ This command uses a string that represents the permissions.
 |```sudo apt-get upgrade```|Verifies if exists system updates.|
 |```sudo apt-get autoremove```|Removes all obsolete and unnecessary packages.|
 |```sudo apt-get autoclean```|Cleans the packet manager cache.|
-
-
+|```sudo apt-cache search <search>```|Finds packages in repository.|
 
 [permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsEN.PNG?raw=true
 "String representation"
