@@ -93,7 +93,8 @@ This command uses a string that represents the permissions.
 |------|------|
 |```sudo apt-get install <package>```|Installs a package.|
 |```sudo apt-get install -f```|Finds and fixes broken packages.|
-|```sudo apt-get remove <package>```|Removes a package.|
+|```sudo apt-get remove <package>```|Removes a package. Leaves user configuration files.|
+|```sudo apt-get purge <package>```|Removes a package completely.|
 |```sudo apt-get update```|Verifies if exists packages repository updates.|
 |```sudo apt-get upgrade```|Verifies if exists system updates.|
 |```sudo apt-get autoremove```|Removes all obsolete and unnecessary packages.|
