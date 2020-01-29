@@ -4,7 +4,7 @@
 
 ## Navegação
 
-|Command|Description|
+|Comando|Descrição|
 |------|------|
 |```pwd```|Onde estou?|
 |```ls```|Exibe arquivos e diretórios.|
@@ -21,26 +21,26 @@
 |```clear```|Limpa a tela do terminal.|
 |```Ctrl + l```|Limpa a tela do terminal.|
 
-## File and directory manipulation
+## Manipulação de arquivos e diretórios
 
-|Command|Description|
+|Comando|Descrição|
 |------|------|
-|```mkdir <name>```|Create a directory.|
-|```mkdir -p <a>/<ab>/<abc>```|Create nested directories.|
-|```touch <file>```|Create file.|
-|```mv <file> <destination>```|Move file to destination directory.|
-|```mv <origin>/<file> .```|Move file from origin to current directory.|
-|```mv <directory> <new name>```|Rename directory.|
-|```mv <file> <new name>```|Rename file.|
-|```cp <file> <new copy>```|Copy file to a new file.|
-|```cp -r <directory> <new directory>```|Copy directory to a new directory.|
-|```rm <file>```|Remove file.|
-|```rm -r <directory>```|Remove directory.|
-|```cat <file>```|Shows the file contents.|
-|```more <file>```|Shows the file contents. Load all file on memory at one go.|
-|```less <file>```|Shows the file contents. Load the file using streams, this means that the command load just the necessary part of file.(Can use vim's commands)|
-|```chown <user> <file>```|Changes the user that's the file owner.|
-|```chown :<grupo> <file>```|Changes the group of file owners. This command can be used together with the previus one. |
+|```mkdir <name>```|Cria diretório.|
+|```mkdir -p <a>/<ab>/<abc>```|Cria diretório aninhado.|
+|```touch <file>```|Cria arquivo.|
+|```mv <file> <destination>```|Move arquivo para diretório de destino.|
+|```mv <origin>/<file> .```|Move arquivo da origem para para o diretório atual.|
+|```mv <directory> <new name>```|Renomeia o diretório.|
+|```mv <file> <new name>```|Renomeia o arquivo.|
+|```cp <file> <new copy>```|Copia arquivo para novo arquivo.|
+|```cp -r <directory> <new directory>```|Copia diretório para novo diretório de forma recursiva.|
+|```rm <file>```|Remove arquivo.|
+|```rm -r <directory>```|Remove diretório de forma recursiva.|
+|```cat <file>```|Exibe o conteúdo do arquivo.|
+|```more <file>```|Exibe o conteúdo do arquivo. Carrega todo o arquivo em memória de uma vez.|
+|```less <file>```|Exibe o conteúdo do arquivo. Carrega o arquivo usando streams, isso significa que o comando carrega somente a parte necessária do arquivo.(Suporta os comandos do vim)|
+|```chown <user> <file>```|Altera o usuário que é dono do arquivo.|
+|```chown :<grupo> <file>```|Altera o grupo de usuários que são donos do arquivo. Este comando pode ser usado junto com o comando anterior.|
 
 ## History
 
