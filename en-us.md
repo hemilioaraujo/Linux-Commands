@@ -33,9 +33,9 @@
 |```mv <directory> <new name>```|Rename directory.|
 |```mv <file> <new name>```|Rename file.|
 |```cp <file> <new copy>```|Copy file to a new file.|
-|```cp -r <directory> <new directory>```|Copy directory to a new directory.|
+|```cp -r <directory> <new directory>```|Copy directory to a new directory on a recursive way.|
 |```rm <file>```|Remove file.|
-|```rm -r <directory>```|Remove directory.|
+|```rm -r <directory>```|Remove directory on a recursive way.|
 |```cat <file>```|Shows the file contents.|
 |```more <file>```|Shows the file contents. Load all file on memory at one go.|
 |```less <file>```|Shows the file contents. Load the file using streams, this means that the command load just the necessary part of file.(Can use vim's commands)|
