@@ -5,11 +5,10 @@
 
 ## Languages
 
-  
-[:us: English ][english]  
+:us:  
+[ English ][english]  
 :brazil:  
 [ Portuguese ][portuguese]
-
 
 
 
