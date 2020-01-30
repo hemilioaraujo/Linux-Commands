@@ -5,10 +5,9 @@
 
 ## Languages
 
-:us:  
-[ English ][english]  
-:brazil:  
-[ Portuguese ][portuguese]
+[ ![flag][en-us-flag] English ][english]  
+
+[ ![flag][pt-br-flag] Portuguese ][portuguese]
 
 
 
@@ -17,3 +16,12 @@
 
 [portuguese]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/pt-br.md
 "String representation"
+
+[en-us-flag]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/flags/United-States-of-America.png?raw=true
+"String representation"
+
+[pt-br-flag]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/flags/Brazil.png?raw=true
+"String representation"
+
+
+
