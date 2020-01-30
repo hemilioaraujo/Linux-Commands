@@ -79,13 +79,13 @@ Este comando usa uma string para representar as permissões.
 |```chmod 700 <arquivo>```|Somente o dono do arquivo tem todas as permissões.|
 |```chmod 600 <arquivo>```|O dono do arquivo pode ler e escrever no mesmo.|
 
-## Varieties
+## Variedades
 
 |Comando|Descrição|
 |------|------|
-|```diff -qr <diretório1> <diretório2>```|Shows the differences between the directories. Argument ```-q``` shows modified or nonexistent arquivos. Argument ```-r``` shows the differences between arquivos content.|
-|```man <comando>```|Page of Manual of comandos.|
-|```whoami```|Who am i? Shows you usuárionome.|
+|```diff -qr <diretório1> <diretório2>```|Exibe as diferenças entre os diretórios. Argumento ```-q``` exibe arquivo modificados ou não existentes. Argumento ```-r``` exibe a diferença entre o conteúdo dos arquivos.|
+|```man <comando>```|Manual do comando.|
+|```whoami```|Quem sou eu? Exibe seu usuário.|
 
 ## Packet manager (apt-get)
 
