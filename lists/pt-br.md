@@ -87,20 +87,20 @@ Este comando usa uma string para representar as permissões.
 |```man <comando>```|Manual do comando.|
 |```whoami```|Quem sou eu? Exibe seu usuário.|
 
-## Packet manager (apt-get)
+## Gerenciador de pacotes (apt-get)
 
 |Comando|Descrição|
 |------|------|
-|```sudo apt-get install <pacote>```|Installs a pacote.|
-|```sudo apt-get install -f```|Finds and fixes broken pacotes.|
-|```sudo apt-get remove <pacote>```|Removes a pacote. Leaves usuário configuration arquivos.|
-|```sudo apt-get purge <pacote>```|Removes a pacote completely.|
-|```sudo apt-get update```|Verifies if exists pacotes repository updates.|
-|```sudo apt-get upgrade```|Verifies if exists system updates.|
-|```sudo apt-get autoremove```|Removes all obsolete and unnecessary pacotes.|
-|```sudo apt-get autoclean```|Cleans the packet manager cache.|
-|```apt-cache search <pesquisa>```|Finds pacotes in repository.|
-|```apt-cache show <nome_do_pacote>```|Shows a descrição about the pacote.|
+|```sudo apt-get install <pacote>```|Instala pacote.|
+|```sudo apt-get install -f```|Encontra e corrige pacotes danificados.|
+|```sudo apt-get remove <pacote>```|Remove pacote. Mantendo os arquivos de configuração do usuário.|
+|```sudo apt-get purge <pacote>```|Remove pacote completamente.|
+|```sudo apt-get update```|Verifica se existe atualização no repositório de pacotes.|
+|```sudo apt-get upgrade```|Verifica se existe atualização do sistema.|
+|```sudo apt-get autoremove```|Remove todos os pacotes obsoletos e desnecessários.|
+|```sudo apt-get autoclean```|Limpa o cache do gerenciador de pacotes.|
+|```apt-cache search <pesquisa>```|Encontra pacotes no repositório.|
+|```apt-cache show <nome_do_pacote>```|Exibe a descrição sobre o pacote.|
 
 [permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsPT.PNG?raw=true
 "String representation"
