@@ -1,6 +1,6 @@
 # Linux Commands
 
-    :keyboard: A Linux terminal commands list that's commonly used.
+    :computer: A Linux terminal commands list that's commonly used.
 
 
 ## Languages
