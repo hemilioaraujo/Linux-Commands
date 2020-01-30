@@ -12,8 +12,8 @@
 |```ls -lh```|Exibe arquivos e diretórios de uma forma extendida com unidade de medida.|
 |```ls -a```|Exibe arquivos e diretórios inclusive os ocultos.|
 |```ls -la```|Exibe arquivos e diretórios inclusive os ocultos de uma forma extendida.|
-|```cd <directory>```|Vai para o diretório de destino.|
-|```cd <directory>/<sub-directory>```|Vai ara o sub-diretório de destino.|
+|```cd <diretório>```|Vai para o diretório de destino.|
+|```cd <diretório>/<sub-diretório>```|Vai ara o sub-diretório de destino.|
 |```cd ..```|Retorna para o diretório anterior.|
 |```cd ../../```|Retorna para o diretório anterior.|
 |```cd /```|Vai para o diretório raiz.|
@@ -25,22 +25,22 @@
 
 |Comando|Descrição|
 |------|------|
-|```mkdir <name>```|Cria diretório.|
+|```mkdir <nome>```|Cria diretório.|
 |```mkdir -p <a>/<ab>/<abc>```|Cria diretório aninhado.|
-|```touch <file>```|Cria arquivo.|
-|```mv <file> <destination>```|Move arquivo para diretório de destino.|
-|```mv <origin>/<file> .```|Move arquivo da origem para para o diretório atual.|
-|```mv <directory> <new name>```|Renomeia o diretório.|
-|```mv <file> <new name>```|Renomeia o arquivo.|
-|```cp <file> <new copy>```|Copia arquivo para novo arquivo.|
-|```cp -r <directory> <new directory>```|Copia diretório para novo diretório de forma recursiva.|
-|```rm <file>```|Remove arquivo.|
-|```rm -r <directory>```|Remove diretório de forma recursiva.|
-|```cat <file>```|Exibe o conteúdo do arquivo.|
-|```more <file>```|Exibe o conteúdo do arquivo. Carrega todo o arquivo em memória de uma vez.|
-|```less <file>```|Exibe o conteúdo do arquivo. Carrega o arquivo usando streams, isso significa que o comando carrega somente a parte necessária do arquivo.(Suporta os comandos do vim)|
-|```chown <user> <file>```|Altera o usuário que é dono do arquivo.|
-|```chown :<grupo> <file>```|Altera o grupo de usuários que são donos do arquivo. Este comando pode ser usado junto com o comando anterior.|
+|```touch <arquivo>```|Cria arquivo.|
+|```mv <arquivo> <destino>```|Move arquivo para diretório de destino.|
+|```mv <origem>/<arquivo> .```|Move arquivo da origem para para o diretório atual.|
+|```mv <diretório> <novo nome>```|Renomeia o diretório.|
+|```mv <arquivo> <novo nome>```|Renomeia o arquivo.|
+|```cp <arquivo> <nova cópia>```|Copia arquivo para novo arquivo.|
+|```cp -r <diretório> <novo diretório>```|Copia diretório para novo diretório de forma recursiva.|
+|```rm <arquivo>```|Remove arquivo.|
+|```rm -r <diretório>```|Remove diretório de forma recursiva.|
+|```cat <arquivo>```|Exibe o conteúdo do arquivo.|
+|```more <arquivo>```|Exibe o conteúdo do arquivo. Carrega todo o arquivo em memória de uma vez.|
+|```less <arquivo>```|Exibe o conteúdo do arquivo. Carrega o arquivo usando streams, isso significa que o comando carrega somente a parte necessária do arquivo.(Suporta os comandos do vim)|
+|```chown <usuário> <arquivo>```|Altera o usuário que é dono do arquivo.|
+|```chown :<grupo> <arquivo>```|Altera o grupo de usuários que são donos do arquivo. Este comando pode ser usado junto com o comando anterior.|
 
 ## Histórico
 
@@ -55,12 +55,12 @@
 
 ## Permissions
 
-|Command|Description|
+|comando|Description|
 |------|------|
-|```chmod xxx <file or directory>```|chmod changes the permissions of user, group or everyone to read, write or run the file.|
-|```chmod -R xxx <directory>```|Changes the permissions of all files and directories that are in the directory recursively.|
+|```chmod xxx <arquivo or diretório>```|chmod changes the permissions of usuário, group or everyone to read, write or run the arquivo.|
+|```chmod -R xxx <diretório>```|Changes the permissions of all arquivos and directories that are in the diretório recursively.|
 
-This command uses a string that represents the permissions.
+This comando uses a string that represents the permissions.
 
 ![ inserir explicação aqui ][permissions]
 
@@ -74,33 +74,33 @@ This command uses a string that represents the permissions.
 
 |||
 |------|------|
-|```chmod 111 <file>```|Everyone could execute the file.|
-|```chmod 222 <file>```|Everyone could write to the file.|
-|```chmod 700 <file>```|Only the owner has all the permissions.|
-|```chmod 600 <file>```|The owner could read and write the file.|
+|```chmod 111 <arquivo>```|Everyone could execute the arquivo.|
+|```chmod 222 <arquivo>```|Everyone could write to the arquivo.|
+|```chmod 700 <arquivo>```|Only the owner has all the permissions.|
+|```chmod 600 <arquivo>```|The owner could read and write the arquivo.|
 
 ## Varieties
 
-|Command|Description|
+|Comando|Description|
 |------|------|
-|```diff -qr <diretory1> <diretory2>```|Shows the differences between the directories. Argument ```-q``` shows modified or nonexistent files. Argument ```-r``` shows the differences between files content.|
-|```man <command>```|Page of Manual of commands.|
-|```whoami```|Who am i? Shows you username.|
+|```diff -qr <diretório1> <diretório2>```|Shows the differences between the directories. Argument ```-q``` shows modified or nonexistent arquivos. Argument ```-r``` shows the differences between arquivos content.|
+|```man <comando>```|Page of Manual of comandos.|
+|```whoami```|Who am i? Shows you usuárionome.|
 
 ## Packet manager (apt-get)
 
-|Command|Description|
+|Comando|Description|
 |------|------|
-|```sudo apt-get install <package>```|Installs a package.|
-|```sudo apt-get install -f```|Finds and fixes broken packages.|
-|```sudo apt-get remove <package>```|Removes a package. Leaves user configuration files.|
-|```sudo apt-get purge <package>```|Removes a package completely.|
-|```sudo apt-get update```|Verifies if exists packages repository updates.|
+|```sudo apt-get install <pacote>```|Installs a pacote.|
+|```sudo apt-get install -f```|Finds and fixes broken pacotes.|
+|```sudo apt-get remove <pacote>```|Removes a pacote. Leaves usuário configuration arquivos.|
+|```sudo apt-get purge <pacote>```|Removes a pacote completely.|
+|```sudo apt-get update```|Verifies if exists pacotes repository updates.|
 |```sudo apt-get upgrade```|Verifies if exists system updates.|
-|```sudo apt-get autoremove```|Removes all obsolete and unnecessary packages.|
+|```sudo apt-get autoremove```|Removes all obsolete and unnecessary pacotes.|
 |```sudo apt-get autoclean```|Cleans the packet manager cache.|
-|```apt-cache search <search>```|Finds packages in repository.|
-|```apt-cache show <name_of_package>```|Shows a description about the package.|
+|```apt-cache search <pesquisa>```|Finds pacotes in repository.|
+|```apt-cache show <nome_do_pacote>```|Shows a description about the pacote.|
 
-[permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsEN.PNG?raw=true
+[permissions]: https://github.com/hemilioaraujo/Linux-comandos/blob/master/img/permissionsEN.PNG?raw=true
 "String representation"
