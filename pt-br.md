@@ -42,16 +42,16 @@
 |```chown <user> <file>```|Altera o usuário que é dono do arquivo.|
 |```chown :<grupo> <file>```|Altera o grupo de usuários que são donos do arquivo. Este comando pode ser usado junto com o comando anterior.|
 
-## History
+## Histórico
 
-|Command|Description|
+|Comando|Descrição|
 |------|------|
-|```history```|Shows commands history.|
-|```Ctrl + r```|Start the interactive search on history or find the next occurrence when the interactive search has already started.|
-|```!n```|Execute the command number 'n'.|
-|```!!```|Repeat the last command.|
-|```!<string>```|Repeat the last command that starts with 'string'.|
-|```dirs -p```|Shows the history of visited directories.|
+|```history```|Exibe o histórico de comandos.|
+|```Ctrl + r```|Inicia a busca interatica no histórico ou encontra a próxima ocorrência quando a busca interativa já foi iniciada.|
+|```!n```|Executa o comando número 'n'.|
+|```!!```|Repete o comando anterior.|
+|```!<string>```|Repete o comando anterior que inicia com 'string'.|
+|```dirs -p```|Exibe o histórico de diretórios visitados.|
 
 ## Permissions
 
