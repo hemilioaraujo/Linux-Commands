@@ -5,10 +5,19 @@
 
 ## Languages
 
-:us: English
+:us:  
+[ English ][english]  
+:brazil:  
+[ Portuguese ][portuguese]
 
-:brazil: Portuguese
 
+
+
+[english]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/en-us.md
+"String representation"
+
+[portuguese]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/pt-br.md
+"String representation"
 
 ## Navigation
 
