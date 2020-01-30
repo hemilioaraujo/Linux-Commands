@@ -1,6 +1,14 @@
 # Linux Commands
 
-    A Linux terminal commands list that's commonly used.
+    :keyboard: A Linux terminal commands list that's commonly used.
+
+
+## Languages
+
+:us: English
+
+:brazil: Portuguese
+
 
 ## Navigation
 
