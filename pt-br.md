@@ -53,35 +53,35 @@
 |```!<string>```|Repete o comando anterior que inicia com 'string'.|
 |```dirs -p```|Exibe o histórico de diretórios visitados.|
 
-## Permissions
+## Permissões
 
-|comando|Description|
+|Comando|Descrição|
 |------|------|
-|```chmod xxx <arquivo or diretório>```|chmod changes the permissions of usuário, group or everyone to read, write or run the arquivo.|
-|```chmod -R xxx <diretório>```|Changes the permissions of all arquivos and directories that are in the diretório recursively.|
+|```chmod xxx <arquivo or diretório>```|chmod altera as permissões do usuário, grupo ou todos para ler, escrever ou executar o arquivo.|
+|```chmod -R xxx <diretório>```|Altera a permissão de todos arquivos e diretórios que estão no diretório recursivamente.|
 
-This comando uses a string that represents the permissions.
+Este comando usa uma string para representar as permissões.
 
 ![ inserir explicação aqui ][permissions]
 
-* __( r )__ read permitted.
+* __( r )__ permitido leitura.
 
-* __( w )__ write permitted.
+* __( w )__ permitido escrita.
 
-* __( x )__ execution permitted.
+* __( x )__ permitido executar.
 
-### Exemples
+### Exemplos
 
-|||
+|Comando|Descrição|
 |------|------|
-|```chmod 111 <arquivo>```|Everyone could execute the arquivo.|
-|```chmod 222 <arquivo>```|Everyone could write to the arquivo.|
-|```chmod 700 <arquivo>```|Only the owner has all the permissions.|
-|```chmod 600 <arquivo>```|The owner could read and write the arquivo.|
+|```chmod 111 <arquivo>```|Todos podem executar o arquivo.|
+|```chmod 222 <arquivo>```|Todos podem escrever no arquivo.|
+|```chmod 700 <arquivo>```|Somente o dono do arquivo tem todas as permissões.|
+|```chmod 600 <arquivo>```|O dono do arquivo pode ler e escrever no mesmo.|
 
 ## Varieties
 
-|Comando|Description|
+|Comando|Descrição|
 |------|------|
 |```diff -qr <diretório1> <diretório2>```|Shows the differences between the directories. Argument ```-q``` shows modified or nonexistent arquivos. Argument ```-r``` shows the differences between arquivos content.|
 |```man <comando>```|Page of Manual of comandos.|
@@ -89,7 +89,7 @@ This comando uses a string that represents the permissions.
 
 ## Packet manager (apt-get)
 
-|Comando|Description|
+|Comando|Descrição|
 |------|------|
 |```sudo apt-get install <pacote>```|Installs a pacote.|
 |```sudo apt-get install -f```|Finds and fixes broken pacotes.|
@@ -100,7 +100,7 @@ This comando uses a string that represents the permissions.
 |```sudo apt-get autoremove```|Removes all obsolete and unnecessary pacotes.|
 |```sudo apt-get autoclean```|Cleans the packet manager cache.|
 |```apt-cache search <pesquisa>```|Finds pacotes in repository.|
-|```apt-cache show <nome_do_pacote>```|Shows a description about the pacote.|
+|```apt-cache show <nome_do_pacote>```|Shows a descrição about the pacote.|
 
 [permissions]: https://github.com/hemilioaraujo/Linux-comandos/blob/master/img/permissionsEN.PNG?raw=true
 "String representation"
