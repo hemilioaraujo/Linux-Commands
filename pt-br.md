@@ -102,5 +102,5 @@ Este comando usa uma string para representar as permissões.
 |```apt-cache search <pesquisa>```|Finds pacotes in repository.|
 |```apt-cache show <nome_do_pacote>```|Shows a descrição about the pacote.|
 
-[permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsEN.PNG?raw=true
+[permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsPT.PNG?raw=true
 "String representation"
