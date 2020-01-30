@@ -72,7 +72,7 @@ This command uses a string that represents the permissions.
 
 ### Exemples
 
-|||
+|Command|Description|
 |------|------|
 |```chmod 111 <file>```|Everyone could execute the file.|
 |```chmod 222 <file>```|Everyone could write to the file.|
