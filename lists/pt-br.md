@@ -154,6 +154,14 @@ Este comando usa uma string para representar as permissões.
 |```ssh```|OpenSSH SSH client (acesso remoto).|
 |```base64```|Codifica/decodifica na Base64 o ARQUIVO, ou entrada padrão, para saída padrão.|
 
+## Monitoramento
+
+|Comando|Descrição|
+|------|------|
+|```htop```| Exibe os processos em execução no sistema.|
+|```vmstat```|Informações sobre processos , memória , paginação , E / S de bloco , traps , discos e atividade da CPU .|
+|```free```| Observar e monitorar o uso da memória do sistema.|
+
 ## Gerenciador de pacotes (apt-get)
 
 |Comando|Descrição|
