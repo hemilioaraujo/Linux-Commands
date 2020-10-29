@@ -42,6 +42,18 @@
 |```chown <user> <file>```|Changes the user that's the file owner.|
 |```chown :<grupo> <file>```|Changes the group of file owners. This command can be used together with the previus one. |
 
+
+## Search files - Command LOCATE
+
+|Command|Description|
+|------|------|
+|```locate <file>```|Search for the file by name.|
+|```locate -b <file>```|Search for the file by name, listing only the files that have the search term instead of returning directories that lead to the files.|
+|```locate -e <file>```|Search for the file by name, and returns the entry of existing files at the time the Linux locate command is executed.|
+|```locate -q  <file>```|Search for the file by name, and disable the display of errors found in the search process.|
+|```locate -c  <file>```|Search for the file by name, and shows the number of matching files, instead of the file names.|
+
+
 ## History
 
 |Command|Description|
