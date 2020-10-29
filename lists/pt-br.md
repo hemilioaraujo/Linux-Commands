@@ -105,9 +105,6 @@
 |```locate -c  <arquivo>```|Busca o arquivo pelo nome, e mostra o número de arquivos correspondentes, ao invés dos nomes dos arquivos.|
 
 
-
-
-
 ## Histórico
 
 |Comando|Descrição|
