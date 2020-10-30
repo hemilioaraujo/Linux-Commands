@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "alfredoFerreiraAssis",
+      "name": "Alfredo Ferreira de Assis",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/48668972?v=4",
+      "profile": "https://github.com/alfredoFerreiraAssis",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Linux-Commands",
+  "projectOwner": "hemilioaraujo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
