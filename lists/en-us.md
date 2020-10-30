@@ -58,7 +58,6 @@
 |```grep -w <term> <file>```|Searches for the pattern of characters in file, returns only the lines where the pattern is in complete words. |
 |```grep -R <term>```|Search the pattern in directories and files, recursively, hierarchically.|
 |```grep -R -l <term>```|Searches the pattern in directories and files, recursively, hierarchically, returning the name of the file containing the pattern you are looking for.|
-|```grep -R <term>```|Search the pattern in directories and files, recursively, hierarchically.|
 |```grep ^<term> <file>```|Searches for the character pattern at the beginning of a line in file.|
 |```grep <term>$ <file>```|Searches for the character pattern at the end of a line in file.|
 |```grep s.r <file>```|Searches for the pattern letter s followed by any character followed by the letter r.|
