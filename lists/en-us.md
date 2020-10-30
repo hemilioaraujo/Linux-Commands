@@ -11,6 +11,7 @@
 |```ls -l```|List files and directories in an extended form.|
 |```ls -lh```|List files and directories in an extended form and shows the file's unit of measurement.|
 |```ls -a```|List all files and directories including the hidden ones.|
+|```ls -ltr```|List files and directories by date.|
 |```ls -la```|List all files and directories including the hidden ones in an extended form.|
 |```cd <directory>```| Change to destination directory|
 |```cd <directory>/<sub-directory>```| Change to destination sub-directory.|
@@ -18,8 +19,10 @@
 |```cd ../../```|Go back to previous directory.|
 |```cd /```|Go to root directory.|
 |```cd ~```|Go to home directory.|
+|```(cd .. ;ls -l)```|Execute the command in a "sub shell", in the case of the example, continue in the same directory, after listing the previous directory.|
 |```clear```|Clear the terminal screen.|
 |```Ctrl + l```|Clear the terminal screen.|
+|```exit```|Close the terminal.|
 
 ## File and directory manipulation
 
@@ -98,6 +101,30 @@ This command uses a string that represents the permissions.
 |```diff -qr <directory1> <directory2>```|Shows the differences between the directories. Argument ```-q``` shows modified or nonexistent files. Argument ```-r``` shows the differences between files content.|
 |```man <command>```|Page of Manual of commands.|
 |```whoami```|Who am i? Shows you username.|
+|```whatis```|Displays what a command is.|
+|```date```|Displays date and time.|
+|```ps```|Displays information about processes.|
+|```ps -aux```|Displays information about processes, users, tty.|
+|```expr```|Evaluate expressions.|
+|```sleep 1```|Pauses execution for a certain time, in this case 1 second.|
+|```uname```|Displays system information.|
+|```uname -r```|Displays information about the kernel.|
+|```hostname```|Displays or sets system hostname.|
+|```curl```|Make web requests.|
+|```ping```|Send ICMP requests.|
+|```netstat```|Shows network connections, routing tables, interface statistics and masked connections.|
+|```wget```|Download content from a web page.|
+|```ssh```|OpenSSH SSH client (remote access).|
+|```base64```|Base64 encodes / decodes the FILE, or standard input, to standard output.|
+
+## Monitoramento
+
+|Command|Description|
+|------|------|
+|```htop```|Displays processes running on the system.|
+|```vmstat```|Information about processes, memory, paging, block I / O, traps, disks and CPU activity.|
+|```free```|Watch and monitor system memory usage.|
+
 
 ## Packet manager (apt-get)
 
