@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "hemilioaraujo",
+      "name": "HLAM",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/28680369?v=4",
+      "profile": "https://programacaoemusica.wordpress.com/",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Linux-Commands",
+  "projectOwner": "hemilioaraujo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
