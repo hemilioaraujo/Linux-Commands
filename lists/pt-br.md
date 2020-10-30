@@ -81,18 +81,16 @@
 |```grep -w <padrao> <arquivo>```|Busca o padrão de caracteres em arquivo, retorna apenas as linhas onde o padrão encontra-se em palavras completas. |
 |```grep -R <padrao>```|Busca o padrão em diretórios e arquivos,recursivamente, hierarquicamente.|
 |```grep -R -l <padrao>```|Busca o padrão em diretórios e arquivos,recursivamente, hierarquicamente, retornando o nome do arquivo que contém o padrão procurado|
-|```grep -R <padrao>```|Busca o padrão em diretórios e arquivos,recursivamente, hierarquicamente.|
 |```grep ^<padrao> <arquivo>```|Busca o padrão de caracteres no inicio de uma linha em arquivo.|
 |```grep <padrao>$ <arquivo>```|Busca o padrão de caracteres no fim de uma linha em arquivo.|
-|```grep s.r <arquivo>```|Busca o padrão letra s seguida por qualquer caracter seguida pela letra r.|
-|```grep -w -E j.{1,}y <arquivo>```|Busca o palavras iniciadas pela letra j terminas em y com 3 ou mais caracteres.|
-|```grep ^[aeiou] -i <arquivo>```|Busca o padrão linhas iniciadas por vogais minúsculas e maiúsculas em um arquivo.|
-|```grep ^[1-5] <arquivo>```|Busca o padrão linhas iniciadas por 1,2,3,4,5 em um arquivo.|
-|```grep -E [aeiou]{2,3} <arquivo>```|Busca o padrão linhas contendo duas ou três vogais unidas.|
-|```grep -E -i '(ch\|x)[aeiou]```|Busca o padrão linhas contendo CH ou X seguidos por vogais, ignorando maiúsculas e minúsculas.|
+|```grep s.r <arquivo>```|Busca por letra s seguida por qualquer caracter seguida pela letra r.|
+|```grep -w -E j.{1,}y <arquivo>```|Busca por palavras iniciadas pela letra j e terminadas em y com 3 ou mais caracteres.|
+|```grep ^[aeiou] -i <arquivo>```|Busca por linhas iniciadas por vogais minúsculas e maiúsculas em um arquivo.|
+|```grep ^[1-5] <arquivo>```|Busca por linhas iniciadas por 1,2,3,4 ou 5 em um arquivo.|
+|```grep -E [aeiou]{2,3} <arquivo>```|Busca por linhas contendo duas ou três vogais unidas.|
+|```grep -E -i '(ch\|x)[aeiou]```|Busca por linhas contendo CH ou X seguidos por vogais, ignorando maiúsculas e minúsculas.|
 |```grep -E Go{2,}gle ```|Busca o padrão G seguido por 2 ou mais letras o. Reconhece Google Goooogle Gooooooooogle.|
 |```grep -E Go?gle ```|Busca o padrão G seguido por 0 ou 1 letra o. Reconhece Gogle Ggle.|
-
 
 ## Busca em arquivos - Comando LOCATE
 
@@ -103,7 +101,6 @@
 |```locate -e <arquivo>```|Busca o arquivo pelo nome, e retorna a entrada de arquivos existentes no momento que o comando Linux locate é executado.|
 |```locate -q  <arquivo>```|Busca o arquivo pelo nome, e desativa a exibição de erros encontrados no processo de busca.|
 |```locate -c  <arquivo>```|Busca o arquivo pelo nome, e mostra o número de arquivos correspondentes, ao invés dos nomes dos arquivos.|
-
 
 ## Histórico
 
@@ -200,6 +197,7 @@ Este comando usa uma string para representar as permissões.
 |```||```|Só executa o comando caso o comando anterior retorne erro.|
 
 ## Redirecionamento de entreada e saida 
+
 |Comando|Descrição|
 |------|------|
 |```/dev/null```|Lugar nenhum, lixeira.|
