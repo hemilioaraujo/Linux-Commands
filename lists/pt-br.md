@@ -94,6 +94,17 @@
 |```grep -E Go?gle ```|Busca o padrão G seguido por 0 ou 1 letra o. Reconhece Gogle Ggle.|
 
 
+## Busca em arquivos - Comando LOCATE
+
+|Comando|Descrição|
+|------|------|
+|```locate <arquivo>```|Busca o arquivo pelo nome.|
+|```locate -b <arquivo>```|Busca o arquivo pelo nome, listando apenas os arquivos que têm o termo de pesquisa em vez de retornar diretórios que levam aos arquivos.|
+|```locate -e <arquivo>```|Busca o arquivo pelo nome, e retorna a entrada de arquivos existentes no momento que o comando Linux locate é executado.|
+|```locate -q  <arquivo>```|Busca o arquivo pelo nome, e desativa a exibição de erros encontrados no processo de busca.|
+|```locate -c  <arquivo>```|Busca o arquivo pelo nome, e mostra o número de arquivos correspondentes, ao invés dos nomes dos arquivos.|
+
+
 ## Histórico
 
 |Comando|Descrição|
