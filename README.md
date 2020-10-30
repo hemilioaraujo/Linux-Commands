@@ -1,6 +1,6 @@
 # Linux Commands
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 :computer:      A Linux terminal commands list that's commonly used.
@@ -42,6 +42,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/claranobre"><img src="https://avatars3.githubusercontent.com/u/1736022?v=4" width="100px;" alt=""/><br /><sub><b>Clara Nobre</b></sub></a><br /><a href="https://github.com/hemilioaraujo/Linux-Commands/commits?author=claranobre" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/vikitor566"><img src="https://avatars3.githubusercontent.com/u/5832796?v=4" width="100px;" alt=""/><br /><sub><b>vikitor566</b></sub></a><br /><a href="https://github.com/hemilioaraujo/Linux-Commands/commits?author=vikitor566" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/estevao90"><img src="https://avatars3.githubusercontent.com/u/18039589?v=4" width="100px;" alt=""/><br /><sub><b>Estevão Costa</b></sub></a><br /><a href="https://github.com/hemilioaraujo/Linux-Commands/commits?author=estevao90" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/alfredoFerreiraAssis"><img src="https://avatars1.githubusercontent.com/u/48668972?v=4" width="100px;" alt=""/><br /><sub><b>Alfredo Ferreira de Assis</b></sub></a><br /><a href="https://github.com/hemilioaraujo/Linux-Commands/commits?author=alfredoFerreiraAssis" title="Documentation">📖</a></td>
   </tr>
 </table>
 
