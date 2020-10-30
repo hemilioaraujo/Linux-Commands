@@ -45,6 +45,30 @@
 |```chown <user> <file>```|Changes the user that's the file owner.|
 |```chown :<grupo> <file>```|Changes the group of file owners. This command can be used together with the previus one. |
 
+## Search for terms in files - GREP Command
+
+|Command|Description|
+|------|------|
+|```grep <term> <file>```|Fetch character pattern in file.|
+|```grep -i <term> <file>```|Searches the character pattern in file, ignoring differences between upper and lower case.|
+|```grep -v <term> <file>```|Searches for the inverse pattern of characters in file, returns the lines that do not conform to the pattern.|
+|```grep --color <term> <file>```|Displays the pattern found in color.|
+|```grep -c <term> <file>```|Returns the number of lines that match the pattern you are looking for.|
+|```grep -n <term> <file>```|Displays next to the pattern found the line number of the file where the pattern is found.|
+|```grep -w <term> <file>```|Searches for the pattern of characters in file, returns only the lines where the pattern is in complete words. |
+|```grep -R <term>```|Search the pattern in directories and files, recursively, hierarchically.|
+|```grep -R -l <term>```|Searches the pattern in directories and files, recursively, hierarchically, returning the name of the file containing the pattern you are looking for.|
+|```grep -R <term>```|Search the pattern in directories and files, recursively, hierarchically.|
+|```grep ^<term> <file>```|Searches for the character pattern at the beginning of a line in file.|
+|```grep <term>$ <file>```|Searches for the character pattern at the end of a line in file.|
+|```grep s.r <file>```|Searches for the pattern letter s followed by any character followed by the letter r.|
+|```grep -w -E j.{1,}y <file>```|Searches for words starting with the letter j and ending with y with 3 or more characters.|
+|```grep ^[aeiou] -i <file>```|Search for lines beginning with lowercase and uppercase vowels in a file.|
+|```grep ^[1-5] <file>```|Search for lines starting with 1,2,3,4 ou 5 in a file.|
+|```grep -E [aeiou]{2,3} <file>```|Search for lines containing two or three joined vowels.|
+|```grep -E -i '(ch\|x)[aeiou]```|Searches for lines containing CH or X followed by vowels, ignoring upper and lower case.|
+|```grep -E Go{2,}gle ```|Search for G followed by 2 or more letters o. Recognizes Google Goooogle Gooooooooogle.|
+|```grep -E Go?gle ```|Search by letter G followed by 0 or 1 letter o. Recognizes Gogle Ggle.|
 
 ## Search files - Command LOCATE
 
