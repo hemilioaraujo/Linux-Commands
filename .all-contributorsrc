@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ReinanS",
+      "name": "Reinan de Souza",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/51024246?v=4",
+      "profile": "https://www.linkedin.com/in/reinan-santos99/",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Linux-Commands",
+  "projectOwner": "hemilioaraujo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
