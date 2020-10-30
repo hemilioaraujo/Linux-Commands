@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "claranobre",
+      "name": "Clara Nobre",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1736022?v=4",
+      "profile": "https://github.com/claranobre",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Linux-Commands",
+  "projectOwner": "hemilioaraujo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
