@@ -58,6 +58,7 @@
 |```locate```|Exibe path de um diretório ou arquivo.|
 |```find```|Busca por arquivos em uma hierarquia de diretórios.|
 |```find <diretório> > <arquivo>```|Salvar resultado da busca em um arquivo|
+|```find <diretório> -mtime -days -ls```|Buscar arquivos modificados nos últimos N dias|
 |```echo```|Exibe uma mensagem na tela.|
 |```echo $VARIAVEL```|Exibe uma variável na tela.|
 |```tar```|Compressor de arquivos.|
