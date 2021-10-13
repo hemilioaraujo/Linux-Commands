@@ -149,6 +149,8 @@ Este comando usa uma string para representar as permissões.
 |```whoami```|Quem sou eu? Exibe seu usuário.|
 |```whatis```|Exibe o que é um comando.|
 |```date```|Exibe data e hora.|
+|```ps```|Exibe informações sobre processos.|
+|```ps -aux```|Exibe informações sobre processos, usuários, tty.|
 |```expr```|Avaliar expressões.|
 |```sleep 1```|Pausa a execução por um determinado tempo, no caso 1 segundo.|
 |```uname```|Exibe informações sobre o sistema.|
@@ -177,6 +179,7 @@ Este comando usa uma string para representar as permissões.
 |```echo $$```|Imprimi qual o PID do processo atual.|
 |```echo $!```|Imprimi qual o PID do ultimo processo executado em background.|
 |```echo $?```|Imprimi o exitcode do ultimo comando, 0 sucesso, >=1 erro.|
+
 ## Gerenciador de pacotes (apt-get)
 
 |Comando|Descrição|

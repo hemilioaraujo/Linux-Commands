@@ -1,0 +1,69 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ReinanS",
+      "name": "Reinan de Souza",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/51024246?v=4",
+      "profile": "https://www.linkedin.com/in/reinan-santos99/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "claranobre",
+      "name": "Clara Nobre",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1736022?v=4",
+      "profile": "https://github.com/claranobre",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vikitor566",
+      "name": "vikitor566",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5832796?v=4",
+      "profile": "https://github.com/vikitor566",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "estevao90",
+      "name": "Estevão Costa",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/18039589?v=4",
+      "profile": "https://github.com/estevao90",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "alfredoFerreiraAssis",
+      "name": "Alfredo Ferreira de Assis",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/48668972?v=4",
+      "profile": "https://github.com/alfredoFerreiraAssis",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hemilioaraujo",
+      "name": "HLAM",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/28680369?v=4",
+      "profile": "https://programacaoemusica.wordpress.com/",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Linux-Commands",
+  "projectOwner": "hemilioaraujo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
