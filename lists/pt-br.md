@@ -107,6 +107,7 @@
 |Comando|Descrição|
 |------|------|
 |```history```|Exibe o histórico de comandos.|
+|```history -c```|Limpa o arquivo de histórico.|
 |```Ctrl + r```|Inicia a busca interativa no histórico ou encontra a próxima ocorrência quando a busca interativa já foi iniciada.|
 |```!n```|Executa o comando número 'n'.|
 |```!!```|Repete o comando anterior.|
@@ -161,6 +162,8 @@ Este comando usa uma string para representar as permissões.
 |```wget```|Baixar conteudo de uma página na web.|
 |```ssh```|OpenSSH SSH client (acesso remoto).|
 |```base64```|Codifica/decodifica na Base64 o ARQUIVO, ou entrada padrão, para saída padrão.|
+|```ldd```|Imprimi dependências de objetos compartilhados.|
+|```type```|Informa se um comando é interno ou externo. Exemplo de uso: type cd|
 
 ## Monitoramento
 
@@ -169,6 +172,13 @@ Este comando usa uma string para representar as permissões.
 |```htop```| Exibe os processos em execução no sistema.|
 |```vmstat```|Informações sobre processos , memória , paginação , E / S de bloco , traps , discos e atividade da CPU .|
 |```free```| Observar e monitorar o uso da memória do sistema.|
+|```ps```|Exibe informações sobre processos.|
+|```ps -aux```|Exibe informações sobre processos, usuários, tty.|
+|```kill -s```|Envia um sinal para um processo.|
+|```kill -l```|Lista sinais.|
+|```echo $$```|Imprimi qual o PID do processo atual.|
+|```echo $!```|Imprimi qual o PID do ultimo processo executado em background.|
+|```echo $?```|Imprimi o exitcode do ultimo comando, 0 sucesso, >=1 erro.|
 
 ## Gerenciador de pacotes (apt-get)
 
@@ -208,6 +218,29 @@ Este comando usa uma string para representar as permissões.
 |```2>1```|Redireciona saida de erro e de sucesso para o mesmo arquivo.|
 |```2>>1```|Redireciona saida de erro e de sucesso para o mesmo arquivo.|
 
+## Variáveis
+
+|Comando|Descrição|
+|------|------|
+|```VARIAVEL=valor```|Delcaração de variável.|
+|```unset VARIAVEL```|Remove variável.|
+|```env```|Muda o valor de uma variável para o proximo comando. Exibir variáveis globais.|
+|```set```|Exibe todas variáveis do ambiente, locais e globais.|
+|```export```|Exporta uma variável.|
+
+### Algumas Variáveis do Sistema
+
+|Variável|Descrição|
+|------|------|
+|```DISPLAY```|Indica às aplicações gráficas onde as janelas deverão ser exibidas.|
+|```HISTFILE```|Arquivo do histórico de comandos.|
+|```HISTFILESIZE```|Quantidade de linhas/comandos armazenados no arquivo de histórico.|
+|```HOME```|Diretório home do usuário atual.|
+|```LOGNAME e USER```|Nome do usuário atual.|
+|```PATH```|Diretórios que o Linux busca por arquivos executáveis.|
+|```PS1```|Aparência do prompt do shell.|
+|```PWD```|Diretório atual.|
+|```OLDPWD```|Diretório anterior.|
 
 [permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsPT.PNG?raw=true
 "String representation"
