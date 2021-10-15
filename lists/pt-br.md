@@ -13,9 +13,12 @@
 |```ls -a```|Exibe arquivos e diretórios, inclusive os ocultos.|
 |```ls -ltr```|Lista arquivos e diretórios por data.|
 |```ls -la```|Exibe arquivos e diretórios, inclusive os ocultos, de uma forma extendida.|
+|```ls -F```|Classifica o conteúdo em arquivos, diretórios, executáveis e outros.|
+|```ls -F <diretório>```|Classifica o conteúdo de um diretório específico.|
 |```cd <diretório>```|Vai para o diretório de destino.|
 |```cd <diretório>/<sub-diretório>```|Vai para o sub-diretório de destino.|
 |```cd ..```|Retorna para o diretório anterior.|
+|```cd -```|Avança para o último diretório superior visitado (desfazendo "cd ..")```.|
 |```cd ../../```|Retorna para o diretório anterior.|
 |```cd /```|Vai para o diretório raiz.|
 |```cd ~```|Vai para o diretório home.|
@@ -35,18 +38,28 @@
 |```mv <origem>/<arquivo> .```|Move arquivo da origem para para o diretório atual.|
 |```mv <diretório> <novo nome>```|Renomeia o diretório.|
 |```mv <arquivo> <novo nome>```|Renomeia o arquivo.|
+|```mv -i```|Solicita confirmação do usuário, antes de sobreescrever um arquivo de mesmo nome.|
 |```cp <arquivo> <nova cópia>```|Copia arquivo para novo arquivo.|
 |```cp -r <diretório> <novo diretório>```|Copia diretório para novo diretório de forma recursiva.|
 |```rm <arquivo>```|Remove arquivo.|
 |```rm -r <diretório>```|Remove diretório de forma recursiva.|
 |```rm -rf <diretório>```|Remove diretório de forma recursiva, força a remoção.|
+|```rm -i <arquivo>```|Solicita confirmação do usuário, antes de remover um arquivo permanentemente.|
 |```cat <arquivo>```|Exibe o conteúdo do arquivo.|
 |```tac```|Exibe o conteúdo do arquivo ao contrário|
 |```more <arquivo>```|Exibe o conteúdo do arquivo. Carrega todo o arquivo em memória de uma vez.|
 |```less <arquivo>```|Exibe o conteúdo do arquivo. Carrega o arquivo usando streams, isso significa que o comando carrega somente a parte necessária do arquivo.(Suporta os comandos do vim)|
 |```cut```|Remove partes de cada linha de um arquivo.|
+|```cut -d <delimitador> <arquivo>```|Informa o delimitador dos dados, diferindo colunas (usualmente , ou ;).|
+|```cut -f <n°_da_coluna> <arquivo>```|Seleciona uma coluna específica de um arquivo.|
 |```tr```|Altera ou deleta caracteres de um arquivo.|
 |```wc```|Conta linhas, caracteres, bytes de um arquivo.|
+|```sort```|Classifica o conteúdo de um arquivo.|
+|```sort -n```|Classifica o conteúdo de um arquivo em ordem númerica.|
+|```sort -r```|Classifica o conteúdo de um arquivo em ordem númerica decrescente.|
+|```uniq```|Filtra linhas repetidas em uma coluna de dados.|
+|```uniq -c```|Informa a quantidade de repetições de cada linha.|
+|```uniq -d```|Informa o conteúdo das linhas duplicadas.|
 |```sed```|Editor de texto não interativo.|
 |```awk```|Linguagem de programção, trabalha linha por linha em arquivos ou saída de comandos para buscar o que foi solicitado.|
 |```nano```|Editor de texto.|
