@@ -82,6 +82,8 @@
 |```gzip -9 arquivo```|Comprime arquivo.|
 |```chown <usuário> <arquivo>```|Altera o usuário que é dono do arquivo.|
 |```chown :<grupo> <arquivo>```|Altera o grupo de usuários que são donos do arquivo. Este comando pode ser usado junto com o comando anterior.|
+|```du```|Mostra estatísticas de uso do disco, isto informações sobre espaço em disco que arquivos ou pastas ocupam.|
+|```du -h /folder_a```|Mostra o espaço em disco da pasta com caminho "/folder_a". A opção "-h" converte uma saída para um formato mais legível para humanos (por exemplo, Megabytes)|
 
 ## Busca em arquivos - Comando GREP
 
