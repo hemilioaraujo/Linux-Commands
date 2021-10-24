@@ -181,6 +181,8 @@ Este comando usa uma string para representar as permissões.
 |```base64```|Codifica/decodifica na Base64 o ARQUIVO, ou entrada padrão, para saída padrão.|
 |```ldd```|Imprimi dependências de objetos compartilhados.|
 |```type```|Informa se um comando é interno ou externo. Exemplo de uso: type cd|
+|```traceroute```|Informa a rota (ou lista de servidores) que um pacote toma até chegar a seu host de destino. Exemplo de uso: traceroute 8.8.8.8|
+|```alias```|Permite apelidos para comandos. Exemplo: Executar "alias lx = ls -lha" torna possível obter o mesmo resultado de "ls -lha" apenas executando "lx" |
 
 ## Monitoramento
 
