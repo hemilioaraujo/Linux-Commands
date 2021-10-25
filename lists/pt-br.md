@@ -82,6 +82,8 @@
 |```gzip -9 arquivo```|Comprime arquivo.|
 |```chown <usuário> <arquivo>```|Altera o usuário que é dono do arquivo.|
 |```chown :<grupo> <arquivo>```|Altera o grupo de usuários que são donos do arquivo. Este comando pode ser usado junto com o comando anterior.|
+|```du```|Mostra estatísticas de uso do disco, isto informações sobre espaço em disco que arquivos ou pastas ocupam.|
+|```du -h /folder_a```|Mostra o espaço em disco da pasta com caminho "/folder_a". A opção "-h" converte uma saída para um formato mais legível para humanos (por exemplo, Megabytes)|
 
 ## Busca em arquivos - Comando GREP
 
@@ -179,6 +181,8 @@ Este comando usa uma string para representar as permissões.
 |```base64```|Codifica/decodifica na Base64 o ARQUIVO, ou entrada padrão, para saída padrão.|
 |```ldd```|Imprimi dependências de objetos compartilhados.|
 |```type```|Informa se um comando é interno ou externo. Exemplo de uso: type cd|
+|```traceroute```|Informa a rota (ou lista de servidores) que um pacote toma até chegar a seu host de destino. Exemplo de uso: traceroute 8.8.8.8|
+|```alias```|Permite apelidos para comandos. Exemplo: Executar "alias lx = ls -lha" torna possível obter o mesmo resultado de "ls -lha" apenas executando "lx" |
 
 ## Monitoramento
 
