@@ -183,6 +183,8 @@ Este comando usa uma string para representar as permissões.
 |```type```|Informa se um comando é interno ou externo. Exemplo de uso: type cd|
 |```traceroute```|Informa a rota (ou lista de servidores) que um pacote toma até chegar a seu host de destino. Exemplo de uso: traceroute 8.8.8.8|
 |```alias```|Permite apelidos para comandos. Exemplo: Executar "alias lx = ls -lha" torna possível obter o mesmo resultado de "ls -lha" apenas executando "lx" |
+|```ip -br a```|Qual o meu IP na minha rede local? Este comando exibe o IP na rede local de cada placa de rede usando o novo pacote de rede do linux (iproute2util) |
+|```ifconfig```|Qual o meu IP na minha rede local? Este comando exibe o IP (e também algumas outras informações) na rede local de cada placa de rede porém usando o pacote antigo de reded do linux (net-tools), caso queria ver apenas o IP de placas de rede sem fio você pode usar o "iwconfig"  |
 
 ## Monitoramento
 
