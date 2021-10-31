@@ -221,9 +221,9 @@ Este comando usa uma string para representar as permissões.
 |```&```|Executar em segunda plano (./script.sh &).|
 |```bash -xv```|Abre outro bash em formato debug (bash -xv script.sh).|
 |```;```|Executa um comando apos outro.|
-|```|```|Direciona a saida de um comando para outro.|
+|```\|```|Direciona a saida de um comando para outro.|
 |```&&```|Só executa o comando caso o comando anterior não retorne erro.|
-|```||```|Só executa o comando caso o comando anterior retorne erro.|
+|```\|\|```|Só executa o comando caso o comando anterior retorne erro.|
 
 ## Redirecionamento de entreada e saida 
 
