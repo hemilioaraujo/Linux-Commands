@@ -225,7 +225,17 @@ Este comando usa uma string para representar as permissões.
 |```&&```|Só executa o comando caso o comando anterior não retorne erro.|
 |```||```|Só executa o comando caso o comando anterior retorne erro.|
 
-## Redirecionamento de entreada e saida 
+## XARGS
+
+|Comando|Descrição|
+|------|------|
+|```xargs```|Executa um comando com argumentos em uma determinada lista, por padrão executa o comando echo sobre a entrada padrão, para sair Ctrl + D.|
+|```xargs -a <arquivo> -n 2```| Lê os argumentos de um arquivo não da entrada padrão, exibindo dois por linha.|
+|```xargs -a <arquivo> mkdir```| Cria uma lista de diretórios baseada em um arquivo.|
+|```find . -type f -print | xargs -0 md5sum```| Calcula o HASH MD5 de todos os arquivos no diretório corrente.|
+|```xargs -a hosts -P 10 -n1 -I '{}' ping '{}' -q -c 1 -w 1``` | Varre todos IPS no arquivo hosts de maneira paralela, substituindo as chaves pelo IP.|
+
+## Redirecionamento de entreada e saida
 
 |Comando|Descrição|
 |------|------|
