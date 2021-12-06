@@ -33,7 +33,12 @@
 |------|------|
 |```mkdir <nome>```|Cria diretório.|
 |```mkdir -p <a>/<ab>/<abc>```|Cria diretório aninhado.|
+|```rmdir <diretório>```|Remove o diretório, apenas se estiver vazio.|
+|```rmdir -p <a>/<ab>/<abc>```|Remove a estrutura de diretórios, apenas se os diretórios estivem vazios.|
 |```touch <arquivo>```|Cria arquivo.|
+|```touch -m <arquivo_ja_existente>```|Altera a data de modificação.|
+|```touch -a <arquivo_ja_existente>```|Altera a data do ultimo acesso.|
+|```touch -t 202106060606 <arquivo_ja_existente>```|Altera a data e a hora da ultima alteração.|    
 |```mv <arquivo> <destino>```|Move arquivo para diretório de destino.|
 |```mv <origem>/<arquivo> .```|Move arquivo da origem para para o diretório atual.|
 |```mv <diretório> <novo nome>```|Renomeia o diretório.|
@@ -45,18 +50,30 @@
 |```rm -r <diretório>```|Remove diretório de forma recursiva.|
 |```rm -rf <diretório>```|Remove diretório de forma recursiva, força a remoção.|
 |```rm -i <arquivo>```|Solicita confirmação do usuário, antes de remover um arquivo permanentemente.|
+|```rm  -I```|Questiona uma vez antes de remover mais que três arquivos ou ao remover recursivamente.| 
 |```cat <arquivo>```|Exibe o conteúdo do arquivo.|
-|```tac```|Exibe o conteúdo do arquivo ao contrário|
+|```cat -n <arquivo>```|Retorna todas a linhas numeradas.|
+|```cat -b <arquivo>```|Retorna todas as linhas numeradas, exeto as linhas em branco|
+|```cat -s <arquivo>```|Suprime linhas em branco repetidas. |
+|```cat -A <arquivo>```|Exibe caracteres especiais.|  
+|```nl <arquivo>```|Numera as linhas de um arquivo, ignorando as linhas em bracos. Igual ao cat -b|    
+|```tac <arquivo>```|Exibe o conteúdo do arquivo ao contrário|
 |```more <arquivo>```|Exibe o conteúdo do arquivo. Carrega todo o arquivo em memória de uma vez.|
 |```less <arquivo>```|Exibe o conteúdo do arquivo. Carrega o arquivo usando streams, isso significa que o comando carrega somente a parte necessária do arquivo.(Suporta os comandos do vim)|
+|```od```|Exibe o conteúdo de um texto em octal.Ex: echo "slayer" &#124; od|
+|```od -tx```|Exibe o conteúdo de um texto em hexa.|    
 |```cut```|Remove partes de cada linha de um arquivo.|
 |```cut -d <delimitador> <arquivo>```|Informa o delimitador dos dados, diferindo colunas (usualmente , ou ;).|
 |```cut -f <n°_da_coluna> <arquivo>```|Seleciona uma coluna específica de um arquivo.|
 |```tr```|Altera ou deleta caracteres de um arquivo.|
 |```wc```|Conta linhas, caracteres, bytes de um arquivo.|
+|```wc -l <arquivo>```|Exibe quantas linhas um arquivo possui.|
+|```wc- w <arquivo>```|Exibe quantas palavras um arquivo possui.|
+|```wc -c <arquivo>```|Exibe quantos caracteres um arquivo possui.|   
 |```sort```|Classifica o conteúdo de um arquivo.|
 |```sort -n```|Classifica o conteúdo de um arquivo em ordem númerica.|
 |```sort -r```|Classifica o conteúdo de um arquivo em ordem númerica decrescente.|
+|```sort -k 2```|Ordena as linhas de acordo com o campo passado, no caso 2.|    
 |```uniq```|Filtra linhas repetidas em uma coluna de dados.|
 |```uniq -c```|Informa a quantidade de repetições de cada linha.|
 |```uniq -d```|Informa o conteúdo das linhas duplicadas.|
@@ -64,28 +81,63 @@
 |```awk```|Linguagem de programção, trabalha linha por linha em arquivos ou saída de comandos para buscar o que foi solicitado.|
 |```nano```|Editor de texto.|
 |```head```|Exibe as primeiras linhas de um arquivo.|
-|```tail```|Exibe as últimas linhas de um arquivo.|
+|```head -n3 <arquvio>```|Exibe as 3 linhas primeiras de um arquivo.|
+|```head -c100 <arquivo>```|Exibe os 100 primeiros bytes de um arquivo.|    
+|```tail <arquivo>```|Exibe as últimas linhas de um arquivo.|
+|```tail -n5 <arquivo>```|Exibe as ultimas 5 linhas de um arquivo.|
+|```tail -f <arquivo>```|Exibe a atulização de um arquivo em tempo real. Util para verificar logs.|    
 |```strings```|Exibe caracteres de um arquivo.|
-|```grep```|Busca caracteres ou strings em diretórios e arquivos.|
-|```grep -R```|Busca caracteres ou strings em diretórios e arquivos,recursivamente, hierarquicamente.|
-|```locate```|Exibe path de um diretório ou arquivo.|
-|```find```|Busca por arquivos em uma hierarquia de diretórios.|
-|```find <diretório> > <arquivo>```|Salvar resultado da busca em um arquivo|
-|```find <diretório> -mtime -days -ls```|Buscar arquivos modificados nos últimos N dias|
+|```join <arquivo1> <arquivo2>```|Combina dois arquivos, através de um indice. As linhas devem estar na mesma ordem.|
+|```join -j2 <arquivo1> <arquivo2> ```|Muda o indice a ser usado, no caso sera usada a segunda coluna.|
+|```paste <arquivo1> <arquivo2> ```|Combina dois arquivos, linha por linha.|
+|```split ```|Divide um arquivo em varios.|    
 |```echo```|Exibe uma mensagem na tela.|
-|```echo $VARIAVEL```|Exibe uma variável na tela.|
-|```tar```|Compressor de arquivos.|
-|```tar -czvp arquivo_a_ser_criado.tar /path/arquivo_a_ser_comprimido```|Comprime o arquivo.|
-|```tar -xzvf arquivo.tar.gz```|Extrai o arquivo.|
-|```gzip```|Compressor de arquivos.|
-|```gzip -d arquivo.gz```|Extrai arquivo.|
-|```gzip -9 arquivo```|Comprime arquivo.|
+|```file <arquivo>```|Exibe o tipo do arquivo.|    
 |```chown <usuário> <arquivo>```|Altera o usuário que é dono do arquivo.|
 |```chown :<grupo> <arquivo>```|Altera o grupo de usuários que são donos do arquivo. Este comando pode ser usado junto com o comando anterior.|
 |```du```|Mostra estatísticas de uso do disco, isto informações sobre espaço em disco que arquivos ou pastas ocupam.|
 |```du -h /folder_a```|Mostra o espaço em disco da pasta com caminho "/folder_a". A opção "-h" converte uma saída para um formato mais legível para humanos (por exemplo, Megabytes)|
 
-## Busca em arquivos - Comando GREP
+### Compressão de arquivos
+
+Os comandos para comprimir arquivos podem ser utilizados em qualquer arquivo, não preicsa ser arquivos .tar.
+Tais comandos possuem algumas diferenças no algoritimo, o que influencia na velocidade de compressão e tamanho final do arquivo comprimido.    
+
+    
+|Comando|Descrição|
+|------|------|    
+|```tar```|Agrupador de arquivos.|
+|```tar -c```|Criar um arquivo a ser agrupado.|
+|```tar -f```|Define o nome do arquivo.|
+|```tar -v```|Verbose.|    
+|```tar -x```|Extrair arquivos.|
+|```tar -t```|Listar arquivos que existem dentro de um arquivo agrupado.|  
+|```tar -p```|Mantem as permissoẽs dos arquivos que foram agrupados.|  
+|```gzip```|Compressor de arquivos.|  
+|```gzip <arquivo.tar>```|Comprime o arquivo .tar > .tar.gz|
+|```gzip -d <arquivo.gz>```|Descomprime arquivo .gz|
+|```gzip -kd <arquivo.gz>```|Descomprime arquivo e mantem o arquivo original.|    
+|```gunzip <arquivo.gz>```|Descomprime arquivo .gz|
+|```bzip2```|Compressor de arquivos.|
+|```bzip2 -k <arquivo.tar>```|Comprime arquivo tar > tar.bz2, mantem o arquivo original.|
+|```bzip2 -d <arquivo.bz2>```|Descomprime arquivo .bz2|
+|```bunzip2 -d <arquivo.bz2>```|Descomprime arquivo .bz2|
+|```xz```|Compressor de arquivos.| 
+|```xz -k <arquivo.tar>```|Comprime o arquivo .tar > tar.xz, mantem arquivo original|
+|```xz -d <arquivo.xz>```|Descomprime arquivo .xz|
+|```unxz <arquivo.xz>```|Descomprime arquivo .xz|    
+|```tar -zcvpf <arquivo_a_ser_criado.tar> </path/arquivo_a_ser_comprimido>```|Agrupa e comprime arquivos utilizando o tar e o gzip (.tar.gz ou tgz).|
+|```tar -zxvf arquivo.tar.gz```|Extrai e descomprime o arquivos utilizando o gzip (tar.gz ou tgz).|
+|```tar -jcvpf <arquivo_a_ser_criado.tar> </path/arquivo_a_ser_comprimido>```|Agrupa e comprime arquivos utilizando o tar e o bzip2 (.tar.bz2 ou tbz).|
+|```tar -jxvf arquivo.tar.gz```|Extrai e descomprime o arquivos utilizando o bzip2 (tar.bz2 ou tbz).|  
+|```tar -Jcvpf <arquivo_a_ser_criado.tar> </path/arquivo_a_ser_comprimido>```|Agrupa e comprime arquivos utilizando o tar e o xz (.tar.xz ou txz).|
+|```tar -Jxvf arquivo.tar.gz```|Extrai e descomprime o arquivos utilizando o xz (tar.xz o txz).|
+|```cpio```|Agrupador de arquvios, deve receber uma lista de arquivos como entrada. Ex: find ./ -name wordlist1* &#124; cpio -o &#124; gzip > backup.cpio.gz|
+|```cpio -i < backup.cpio```|Desagrupar arquivos.|
+|```gunzip -c backup.cpio \| cpio -i```|Descomprimir e desagrupar arquivos.|
+    
+    
+### Busca em arquivos - Comando GREP
 
 |Comando|Descrição|
 |------|------|
@@ -109,16 +161,20 @@
 |```grep -E Go{2,}gle ```|Busca o padrão G seguido por 2 ou mais letras o. Reconhece Google Goooogle Gooooooooogle.|
 |```grep -E Go?gle ```|Busca o padrão G seguido por 0 ou 1 letra o. Reconhece Gogle Ggle.|
 
-## Busca em arquivos - Comando LOCATE
+### Busca de arquivos
 
 |Comando|Descrição|
 |------|------|
-|```locate <arquivo>```|Busca o arquivo pelo nome.|
+|```locate <arquivo>```|Busca o arquivo pelo nome. Exibe path de um diretório ou arquivo.|
 |```locate -b <arquivo>```|Busca o arquivo pelo nome, listando apenas os arquivos que têm o termo de pesquisa em vez de retornar diretórios que levam aos arquivos.|
 |```locate -e <arquivo>```|Busca o arquivo pelo nome, e retorna a entrada de arquivos existentes no momento que o comando Linux locate é executado.|
 |```locate -q  <arquivo>```|Busca o arquivo pelo nome, e desativa a exibição de erros encontrados no processo de busca.|
 |```locate -c  <arquivo>```|Busca o arquivo pelo nome, e mostra o número de arquivos correspondentes, ao invés dos nomes dos arquivos.|
-
+|```find```|Busca por arquivos em uma hierarquia de diretórios.|
+|```find <diretório> > <arquivo>```|Salvar resultado da busca em um arquivo|
+|```find <diretório> -name <arquivo>```|Busca em um arquivo pelo nome|    
+|```find <diretório> -mtime -days -ls```|Buscar arquivos modificados nos últimos N dias|
+    
 ## Histórico
 
 |Comando|Descrição|
@@ -162,7 +218,10 @@ Este comando usa uma string para representar as permissões.
 |Comando|Descrição|
 |------|------|
 |```diff -qr <diretório1> <diretório2>```|Exibe as diferenças entre os diretórios. Argumento ```-q``` exibe arquivos modificados ou não existentes. Argumento ```-r``` exibe a diferença entre o conteúdo dos arquivos.|
+|```info <comando>```|Ajuda sobre comando passado.|
 |```man <comando>```|Manual do comando.|
+|```man -k <descrição>```|Retorna comandos de acorda com adescrição passada.|
+|```apropos <descrição>```|Retorna possiveis comandos de acordo com a descrição passada. Exemplo de uso: apropos download|  
 |```whoami```|Quem sou eu? Exibe seu usuário.|
 |```whatis```|Exibe o que é um comando.|
 |```date```|Exibe data e hora.|
@@ -174,15 +233,18 @@ Este comando usa uma string para representar as permissões.
 |```uname -r```|Exibe informações sobre o kernel.|
 |```hostname```|Exibe ou seta hostname do sistema.|
 |```curl```|Faz requisições web.|
+|```curl google.com -O google.html```|Faz requisições web e faz download da página/arquivo.|    
 |```ping```|Envia requisiçoes ICMP.|
+|```lshw```|Lista hardware.|    
 |```netstat```|Mostra conexões de rede, tabelas de roteamento, estatísticas de interface e conexões mascaradas.|
-|```wget```|Baixar conteudo de uma página na web.|
+|```wget```|Baixar conteudo de uma página na web.|   
 |```ssh```|OpenSSH SSH client (acesso remoto).|
 |```base64```|Codifica/decodifica na Base64 o ARQUIVO, ou entrada padrão, para saída padrão.|
 |```ldd```|Imprimi dependências de objetos compartilhados.|
 |```type```|Informa se um comando é interno ou externo. Exemplo de uso: type cd|
 |```traceroute```|Informa a rota (ou lista de servidores) que um pacote toma até chegar a seu host de destino. Exemplo de uso: traceroute 8.8.8.8|
 |```alias```|Permite apelidos para comandos. Exemplo: Executar "alias lx = ls -lha" torna possível obter o mesmo resultado de "ls -lha" apenas executando "lx" |
+|```unalias```|Remove um alias ativo.|
 |```ip -br a```|Qual o meu IP na minha rede local? Este comando exibe o IP na rede local de cada placa de rede usando o novo pacote de rede do linux (iproute2util) |
 |```ifconfig```|Qual o meu IP na minha rede local? Este comando exibe o IP (e também algumas outras informações) na rede local de cada placa de rede porém usando o pacote antigo de reded do linux (net-tools), caso queria ver apenas o IP de placas de rede sem fio você pode usar o "iwconfig"  |
 
@@ -213,8 +275,9 @@ Este comando usa uma string para representar as permissões.
 |```sudo apt-get upgrade```|Verifica se existe atualização do sistema.|
 |```sudo apt-get autoremove```|Remove todos os pacotes obsoletos e desnecessários.|
 |```sudo apt-get autoclean```|Limpa o cache do gerenciador de pacotes.|
-|```apt-cache search <pesquisa>```|Encontra pacotes no repositório.|
-|```apt-cache show <nome_do_pacote>```|Exibe a descrição sobre o pacote.|
+|```sudo apt list --upgradable```|Lista pacotes que podem ser atualizados.|    
+|```sudo apt-cache search <pesquisa>```|Encontra pacotes no repositório.|
+|```sudo apt-cache show <nome_do_pacote>```|Exibe a descrição sobre o pacote.|
 
 ## Execução de comandos
 
@@ -258,7 +321,8 @@ Este comando usa uma string para representar as permissões.
 |```env```|Muda o valor de uma variável para o proximo comando. Exibir variáveis globais.|
 |```set```|Exibe todas variáveis do ambiente, locais e globais.|
 |```export```|Exporta uma variável.|
-
+|```echo $VARIAVEL```|Exibe uma variável na tela.|
+    
 ### Algumas Variáveis do Sistema
 
 |Variável|Descrição|
@@ -273,5 +337,24 @@ Este comando usa uma string para representar as permissões.
 |```PWD```|Diretório atual.|
 |```OLDPWD```|Diretório anterior.|
 
+## Partições
+
+|Comando|Descrição|
+|------|------|    
+|```df```|Relatar o uso de espaço em disco do sistema de arquivos.|
+|```dd```|Converte e copia arquivos, usado para copiar uma partição inteira, para outra partição, para um arquivo, ou um arquivo para uma partição.Ex: dd if=/dev/sdb5 of=particao.img (if=entrada df=saida). Util para criar pendrive bootavel.|
+|```lsblk```|Lista dispositivos e partições|   
+
+## Algoritimos de hash para checksum
+Utiliza-se a flg -c para comparar o aqruivo com a hash original e a hash gerada com arquivo baixado.
+
+|Comando|Descrição|
+|------|------|     
+|```md5sum```|Gera hash em md5|
+|```sha1sum```|Gera hash em sha1|
+|```sha256sum```|Gera hash em sha256|
+|```sha512sum```|Gera hash em sha512|
+
+    
 [permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsPT.PNG?raw=true
 "String representation"
