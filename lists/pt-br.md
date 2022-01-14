@@ -15,6 +15,7 @@
 |```ls -la```|Exibe arquivos e diretórios, inclusive os ocultos, de uma forma extendida.|
 |```ls -F```|Classifica o conteúdo em arquivos, diretórios, executáveis e outros.|
 |```ls -F <diretório>```|Classifica o conteúdo de um diretório específico.|
+|```ls -d */```| Lista apenas diretórios.|
 |```cd <diretório>```|Vai para o diretório de destino.|
 |```cd <diretório>/<sub-diretório>```|Vai para o sub-diretório de destino.|
 |```cd ..```|Retorna para o diretório anterior.|
@@ -80,6 +81,7 @@
 |```sed```|Editor de texto não interativo.|
 |```awk```|Linguagem de programção, trabalha linha por linha em arquivos ou saída de comandos para buscar o que foi solicitado.|
 |```nano```|Editor de texto.|
+|```emacs```|Editor de texto.|    
 |```head```|Exibe as primeiras linhas de um arquivo.|
 |```head -n3 <arquvio>```|Exibe as 3 linhas primeiras de um arquivo.|
 |```head -c100 <arquivo>```|Exibe os 100 primeiros bytes de um arquivo.|    
@@ -90,13 +92,14 @@
 |```join <arquivo1> <arquivo2>```|Combina dois arquivos, através de um indice. As linhas devem estar na mesma ordem.|
 |```join -j2 <arquivo1> <arquivo2> ```|Muda o indice a ser usado, no caso sera usada a segunda coluna.|
 |```paste <arquivo1> <arquivo2> ```|Combina dois arquivos, linha por linha.|
-|```split ```|Divide um arquivo em varios.|    
+|```split ```|Divide um arquivo em varios. Por padrão, a cada 1000 linhas.|    
 |```echo```|Exibe uma mensagem na tela.|
 |```file <arquivo>```|Exibe o tipo do arquivo.|    
 |```chown <usuário> <arquivo>```|Altera o usuário que é dono do arquivo.|
 |```chown :<grupo> <arquivo>```|Altera o grupo de usuários que são donos do arquivo. Este comando pode ser usado junto com o comando anterior.|
 |```du```|Mostra estatísticas de uso do disco, isto informações sobre espaço em disco que arquivos ou pastas ocupam.|
 |```du -h /folder_a```|Mostra o espaço em disco da pasta com caminho "/folder_a". A opção "-h" converte uma saída para um formato mais legível para humanos (por exemplo, Megabytes)|
+|```tee```|Envia o conteúdo para a tela e para um arquivo. Exemplo: ls -l /home/ &#124; tee arquivosHome.txt|    
 
 ### Compressão de arquivos
 
@@ -137,7 +140,7 @@ Tais comandos possuem algumas diferenças no algoritimo, o que influencia na vel
 |```gunzip -c backup.cpio \| cpio -i```|Descomprimir e desagrupar arquivos.|
     
     
-### Busca em arquivos - Comando GREP
+### Busca em arquivos - Comando GREP - REGEX
 
 |Comando|Descrição|
 |------|------|
@@ -150,17 +153,30 @@ Tais comandos possuem algumas diferenças no algoritimo, o que influencia na vel
 |```grep -w <padrao> <arquivo>```|Busca o padrão de caracteres em arquivo, retorna apenas as linhas onde o padrão encontra-se em palavras completas. |
 |```grep -R <padrao>```|Busca o padrão em diretórios e arquivos,recursivamente, hierarquicamente.|
 |```grep -R -l <padrao>```|Busca o padrão em diretórios e arquivos,recursivamente, hierarquicamente, retornando o nome do arquivo que contém o padrão procurado|
+|```fgrep```|Não aplica regex.|    
 |```grep ^<padrao> <arquivo>```|Busca o padrão de caracteres no inicio de uma linha em arquivo.|
 |```grep <padrao>$ <arquivo>```|Busca o padrão de caracteres no fim de uma linha em arquivo.|
 |```grep s.r <arquivo>```|Busca por letra s seguida por qualquer caracter seguida pela letra r.|
 |```grep -w -E j.{1,}y <arquivo>```|Busca por palavras iniciadas pela letra j e terminadas em y com 3 ou mais caracteres.|
 |```grep ^[aeiou] -i <arquivo>```|Busca por linhas iniciadas por vogais minúsculas e maiúsculas em um arquivo.|
 |```grep ^[1-5] <arquivo>```|Busca por linhas iniciadas por 1,2,3,4 ou 5 em um arquivo.|
+|```grep -E```|Expande o conjunto regex, necessário a proteção dos caracteres especiais.|    
 |```grep -E [aeiou]{2,3} <arquivo>```|Busca por linhas contendo duas ou três vogais unidas.|
 |```grep -E -i '(ch\|x)[aeiou]```|Busca por linhas contendo CH ou X seguidos por vogais, ignorando maiúsculas e minúsculas.|
 |```grep -E Go{2,}gle ```|Busca o padrão G seguido por 2 ou mais letras o. Reconhece Google Goooogle Gooooooooogle.|
 |```grep -E Go?gle ```|Busca o padrão G seguido por 0 ou 1 letra o. Reconhece Gogle Ggle.|
-
+|```egrep```|Expande o conjunto de regex, não é necessário proteger os caracteres especiais.|
+|```egrep "b[aeio]u"```|Busca pelo padrão começado com 'b', seguido por 'a','e','i' ou 'o' e terminado em 'u'.|
+|```egrep "b[a-z]g"```|Busca pelo padrão começado com 'b', que possuam qualquer letra em sequência, e terminado com 'g'.|
+|```egrep "^A" <arquivo>```|Busca todas linhas começadas com 'A'.|
+|```egrep "a$" <arquivo>```|Busca todas as linhas terminadas com 'a'.|
+|```egrep -v "^$"```|Não exibe as linhas em branco.|
+|```egrep "b[a-z]g*```|O '*' indica que a letra 'g' pode ou não estar na busca, ou pode ser repetida várias vezes.|
+|```egrep "b[a-z]g+```|O '+' indica que o 'g' deve aparecer pelo menos uma vez.|
+|```egrep "b[a-z]g?```|O '?' indica que o 'g' pode aparecer nenhuma ou apenas uma vez.|
+|```egrep "b[a-z]g.```|O '.' indica que após a letra 'g' deve haver um caractere.|
+    
+    
 ### Busca de arquivos
 
 |Comando|Descrição|
@@ -174,6 +190,7 @@ Tais comandos possuem algumas diferenças no algoritimo, o que influencia na vel
 |```find <diretório> > <arquivo>```|Salvar resultado da busca em um arquivo|
 |```find <diretório> -name <arquivo>```|Busca em um arquivo pelo nome|    
 |```find <diretório> -mtime -days -ls```|Buscar arquivos modificados nos últimos N dias|
+|```which```|Localiza arquivos/comandos incluidos no PATH|
     
 ## Histórico
 
@@ -249,20 +266,72 @@ Este comando usa uma string para representar as permissões.
 |```ifconfig```|Qual o meu IP na minha rede local? Este comando exibe o IP (e também algumas outras informações) na rede local de cada placa de rede porém usando o pacote antigo de reded do linux (net-tools), caso queria ver apenas o IP de placas de rede sem fio você pode usar o "iwconfig"  |
 
 ## Monitoramento
-
+    
+Processos possuem permissões e prioridades, não é possivel matar os processos de outro usuário, somente o root consegue. Os valores nice de um processo podem ser definidos de -20 a +19, quanto menor o valor, mais prioridade o processo vai ter, por padrão o valor inicial é 0. Somente o root pode aumentar a prioridade de um processo, usuários comuns podem apenas diminuir.
+    
 |Comando|Descrição|
 |------|------|
+|```uptime```|Exibe hora, há quanto tempo o sistema está ligado, quantidade de usuários logados e load avarege(consumo médio de processos por CPU).|    
 |```htop```| Exibe os processos em execução no sistema.|
 |```vmstat```|Informações sobre processos , memória , paginação , E / S de bloco , traps , discos e atividade da CPU .|
-|```free```| Observar e monitorar o uso da memória do sistema.|
-|```ps```|Exibe informações sobre processos.|
-|```ps -aux```|Exibe informações sobre processos, usuários, tty.|
-|```kill -s```|Envia um sinal para um processo.|
-|```kill -l```|Lista sinais.|
+|```free```|Exibe a quantidade de memória e swap utilizada pelo sistema, em kb.|
+|```free -m / -g```|Exibe a quantidade de memória e swap utilizada pelo sistema, em mb / gb.|
+|```ps```|Informações sobre os processos do usuário logado, somente no tty atual.|
+|```ps -u```|Adicina algumas informçoes sobre sobre os processos no terminal atual.|    
+|```ps -x```|Adiciona processos processos do usuario autal que estão em outro tty.|
+|```ps -ax```|Exibe os processos de todos os usuarios.|
+|```ps -f```|Exibe subprocessos em formato de árvore.|
+|```ps -l/-w```|Exibe os processos e usuarios em um formato diferente.|
+|```ps -C <nome do processo>```|Busca somente o processo passado.|
+|```pstree```|Mostra os processos em hierarquia de execução, em formato de árvore.|
+|```pstree -p```|Adiciona o PID na exibição.|
+|```pgrep bash -u root```|Exibe o PID de todos os processos bash do usúario root.|  
 |```echo $$```|Imprimi qual o PID do processo atual.|
 |```echo $!```|Imprimi qual o PID do ultimo processo executado em background.|
 |```echo $?```|Imprimi o exitcode do ultimo comando, 0 sucesso, >=1 erro.|
+|```jobs```|Lista os processos rodando em background.|
+|```jobs -l```|Lista os processos em background e exibe o PID.|
+|```bg```|Muda o ultimo processo rodando em foreground para background (ctr+z para parar a execução (SIGSTOP) de um processo em foreground sem mata-lo).|
+|```fg```|Muda o  ultimo processo em background para foregorund.|
+|```fg/bg <job ID>```|Muda o job passado.|
+|```nohup```|Evita que o processo recebe sinais, execeto SIGKILL e envia a saída de um processo em backgorund para o arquivo nohup.out |
+|```watch <comando>```|Executa um comando periodicamente, mostrando os resultados.|
+|```watch -nX <comando>```|Exexuta um comando a cada X segundos, o padrão é 2 segundos.|
+|```nice <comando>```|Executa um processo com o valor de prioridade modificado, por padrão com o valor +10.|
+|```nice -n 15 <comando>```|Executa um processo com prioridade +15 (baixa prioridade).|
+|```nice -15 <comando>```|Executa um processo com prioridade +15 (baixa prioridade).|
+|```nice -n -15 <comando>```|Executa um processo com prioridade -15 (Alta prioridade).|
+|```nice --15 <comando>```|Executa um processo com prioridade -15 (Alta prioridade).|
+|```renice```|Altera a prioridade de um processo já em execução.|
+|```renice -n 6 <PID>```|Altera para 6 a prioridade do processo que foi passado.|
+|```renice 6 <PID>```|Altera para 6 a prioridade do processo que foi passado.|
+|```renice -n -6 <PID>```|Altera para -6 a prioridade do processo que foi passado.|
+|```renice -6 <PID>```|Altera para -6 a prioridade do processo que foi passado.|
+|```renice -n 6 -u <usuário>```|Altera para 6 a prioridade de todos os processos do usuário que foi passado.|
+|```renice -n 6 -g <grupo>```|Altera para 6 a prioridade de todos os processos do grupo que foi passado.|    
 
+KILL
+    
+|Comando|Descrição|
+|------|------|    
+|```kill -s```|Envia um sinal para um processo. Exemplo: kill -9 1337 .Envia sigkill para o processo com PID 1337.|
+|```kill -l```|Lista sinais.|
+|```killall <nome do processo>```|Mata os processos que o usuário seja dono, baseado no nome passado.|
+|```pkill <nome do processo>```|Encontra o processo e envia o sinal, baseado no nome passado.|
+    
+Alguns sinais:
+    
+|Sinal|Descrição|
+|------|------|
+|```SIGHUP```|Pode ser usado para terminar, reiniciar, ou fazer que o processo releia suas configuraçõeso, código 1.|
+|```SIGINT```|Interrompe o processo, código 2.|
+|```SIGQUIT```|Fecha o processo, código 3.|
+|```SIGKILL```|Mata o processo abruptamentem, código 9.|
+|```SIGTERM```|Solicita ao processo que finalize, sinal padrão docomando kill, código 15.|
+|```SIGSTOP```|Para o processo, não pode ser ignorado, código 19.|
+|```SIGSTP```|Para o processo, pode ser ignorado, código 20.|
+   
+    
 ## Gerenciador de pacotes (apt-get)
 
 |Comando|Descrição|
@@ -290,6 +359,13 @@ Este comando usa uma string para representar as permissões.
 |```&&```|Só executa o comando caso o comando anterior não retorne erro.|
 |```\|\|```|Só executa o comando caso o comando anterior retorne erro.|
 
+### Executando um comando dentro de outro
+
+|Comando|Descrição|
+|------|------|
+|```echo "A versão do kernel é:" `uname -r` ```|Utilizando crase.|
+|```echo "A versão do kernal é:" $(uname -r)```|Utilizando $().|    
+    
 ## XARGS
 
 |Comando|Descrição|
@@ -311,7 +387,9 @@ Este comando usa uma string para representar as permissões.
 |```2>>```|Saida de erro.|
 |```2>1```|Redireciona saida de erro e de sucesso para o mesmo arquivo.|
 |```2>>1```|Redireciona saida de erro e de sucesso para o mesmo arquivo.|
-
+|```<<<```|Redireciona o que segue como se fosse o conteudo de um arquivo texto. Exemplo: tr a-z A-Z <<< "comandos linux.txt". Saída: COMANDOS LINUX.TXT |
+|```tr a-z A-Z << end```| A variavel "end"(pode ser qualquer string) indica ao shell que a entrada termina naquele ponto, e então ele irá enviar a entrada para o comando. Exemplo: tr a-z A-Z << end <enter> até que a string definida seja escrita todas as letras serão exibidas em caixa alta end.|
+    
 ## Variáveis
 
 |Comando|Descrição|
@@ -354,7 +432,167 @@ Utiliza-se a flg -c para comparar o aqruivo com a hash original e a hash gerada 
 |```sha1sum```|Gera hash em sha1|
 |```sha256sum```|Gera hash em sha256|
 |```sha512sum```|Gera hash em sha512|
+    
+## VIM
+    
+### Edição
+|Comando|Descrição|
+|------|------|    
+|```a```|Editar a partir do próximo caractere.|
+|```A```|Editar a partir do fim da linha.|
+|```i```|Editar a partir do caractere atual.|
+|```o```|Editar a partir da proxima linha.|
+|```O```|Editar a partir Linha Anterior.|
+|```s```|Deletar char e editar.|
+|```S```|Deletar linha e editar.|
+|```C```|Deletar ate o final da linha e editar.|
+|```r```|Realocar um caractere.|
+|```R```|Modo De Realocação.|
+|```U```|Desfazer mudanças.|
+|```ESC```|Sair do modo de inserção.|
 
+### Modo Visual
+    
+|Comando|Descrição|
+|------|------|    
+|```v```|Entrar no modo visual.|
+|```V```|Entrar no modo visual(linha).|
+|```d / x```|Recortar/deletar seleção.|
+|```s```|Realocar seleção.|
+|```y```|Copiar seleção.|
+|```ESC```|Sair do modo visual.|
+
+### Sair
+    
+|Comando|Descrição|
+|------|------|    
+|```:qa```|Fechar todos arquivos.|
+|```:qa!```|Fechar todos arquivos sem salvar.|
+|```:w```|Salvar.|
+|```:w <novo_arquivo>```|Salvar e sair, caso  o arquivo não possua nome.|
+|```:wq / :x```|Salvar e fechar.|
+|```:q```|Fechar arquivo.|
+|```:q!```|Fechar arquivo sem salvar.|
+|```ZZ```|Salvar e sair.|
+|```ZQ```|Sair sem checar mudanças.|
+
+### Navegação
+
+Buscar string
+
+|Comando|Descrição|
+|------|------|    
+|```b/w```|string anterior/próxima.|
+|```ge/e```|Final da string anterior/próxima.|
+
+Linhas
+
+|Comando|Descrição|
+|------|------|    
+|```0```|Inicio da linha.|
+|```^```|Inicio da linha(pula identação).|
+|```$```|Final da linha.|
+
+Caracteres 
+    
+|Comando|Descrição|
+|------|------|
+|```f<char>```|Vai até o char indicado (próximo).|
+|```F<char>```|Vai até o char indicado (anterior).|
+
+Documento
+    
+|Comando|Descrição|
+|------|------|
+|```gg```|Primeira Linha.|
+|```G```|Ultima linha.|
+|```:n```|Vai até linha n.|
+|```nG```|vai até linha n.|
+
+Clipboard
+    
+|Comando|Descrição|
+|------|------|
+|```x```|Deletar caractere.|
+|```dd```|Recortar/deletar linha.|
+|```yy```|Copiar linha.|
+|```p```|Colar.|
+|```P```|Colar antes.|
+
+Pesquisa
+|Comando|Descrição|
+|------|------|
+|```?<string>```|Pesquisar, do final para o começo.|
+|```/<string>```|Pesquisar, do começo para o final.|
+|```n```|Próxima ocorrência.|
+|```N```|Ocorrência anterior. |
+
+Lista de operadores
+
+|Comando|Descrição|
+|------|------|   
+|```d```|Deletar.|
+|```y```|Copiar.|
+|```C```|Deletar e inserir.|
+|```>```|Identação para direita.|
+|```<```|Identação para esqueda.|
+|```=```|Auto identação.|
+|```g~```|Trocar caixa.|
+|```gU```|Caixa alta.|
+|```gu```|Caixa baixa.|
+|```:!<cmd>```|Executa um comando externo.|
+|```:e/:e!```|Atualiza o arquivo, caso tenha sido modificado enquanto aberto.|
+
+Identação
+    
+|Comando|Descrição|
+|------|------|
+|```:set tabstop=8```|Determina o número de colunas inseridas ao utilizar tecla TAB.|
+|```:expandtab```|Produz o número apropiado de espaços ao pressionar a tecla TAB.|
+|```:retab```|Converte o arquivo com a nova configuração de tab.|   
+    
+## tmux
+    
+|Comando|Descrição|
+|------|------|
+|```tmux```|Terminal multiplexer.|
+|```tmux ls/list-sessions " ```|Lista sessões do tmux.|
+|```tmux kill-session -t <x>```|Encerra sessão x do tmux|    
+|```tmux attach -t <numero> " ```|Conecta na sessão x do temux.|
+|```tmux new -s <nome> " ```|Abrir uma nova conexão, caso já existir alguma.|
+|```ctrl+b :kill-session ```|Encerra sessão do tmux.|
+|```ctrl+b d ```|Desconecta do tmux.|
+|```ctrl+b c ```|Cria uma nova aba.|
+|```ctrl+b , ```|Renomeia uma aba.|
+|```ctrl+b p ```|Volta uma aba.|
+|```ctrl+b n ```|Avança para a próxima aba.|
+|```ctrl+b l ```|Volta para a aba anterior.|
+|```ctrl+b f ```|Procurar aba.|
+|```ctrl+b w ```|Lista todas as abas.|
+|```ctrl+b & ```|Matar aba.|
+|```ctrl+b <número> ```|Vai para aba numero x.|
+|```ctrl+b % ```|Divide a janela ao meio, verticalmente.|
+|```ctrl+b " ```|Divide a janela ao meio, horizontalmente.|
+|```ctrl+b <seta direcional> ```|Alternar entre janelas.|
+|```ctrl+b (mantendo pressionado) <seta direcional>  ```|Aumentar/diminuir tamanho da janela.|
+|```ctrl+b o ```|Alternar entre janelas.|
+
+## screen
+|Comando|Descrição|
+|------|------|
+|```screen```|Terminal multiplexer.|
+|```screen -ls```|Mostra se o screen esta ativo.|
+|```screen -r```|Retorna a sessão screen.|
+|```screen <comando>```|Inicia o screen rodando o comando passado.|
+|```ctrl+a c ```|Cria uma nova aba.|
+|```ctrl+a n```|Ir para a próxima aba.|
+|```ctrl+a d```|Sai da sessão do screen, mantém a execução em segundo plano.|
+|```ctrl+a n```|Ir para a próxima aba.|
+|```ctrl+a s```|Divide janela ao meio, horizontalmente.|     
+|```ctrl+a a```|Desfazer.|
+|```ctrl+a TAB```|Mudar para próxima aba.|
+|```ctrl+a X```|Fechar aba.|     
+|```exit```|Fecha a aba atual do screen.|    
     
 [permissions]: https://github.com/hemilioaraujo/Linux-Commands/blob/master/img/permissionsPT.PNG?raw=true
 "String representation"
