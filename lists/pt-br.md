@@ -309,6 +309,7 @@ Processos possuem permissões e prioridades, não é possivel matar os processos
 |```renice -6 <PID>```|Altera para -6 a prioridade do processo que foi passado.|
 |```renice -n 6 -u <usuário>```|Altera para 6 a prioridade de todos os processos do usuário que foi passado.|
 |```renice -n 6 -g <grupo>```|Altera para 6 a prioridade de todos os processos do grupo que foi passado.|    
+|```stat <arquivo\|diretório>```|Imprime as informações do INode do arquivo ou diretório.|    
 
 KILL
     
