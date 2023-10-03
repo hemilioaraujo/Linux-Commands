@@ -515,9 +515,12 @@ Clipboard
 |------|------|
 |```x```|Deletar caractere.|
 |```dd```|Recortar/deletar linha.|
+|```dN```|Recortar/deletar a linha do cursor e mais n abaixo. Substitua N por um número.|
 |```yy```|Copiar linha.|
+|```yN```|Copiar linhas do cursor e mais n abaixo. Substitua N por um número.|
 |```p```|Colar.|
 |```P```|Colar antes.|
+|```u```|Recupera linha apagada.|
 
 Pesquisa
 |Comando|Descrição|
@@ -542,6 +545,10 @@ Lista de operadores
 |```gu```|Caixa baixa.|
 |```:!<cmd>```|Executa um comando externo.|
 |```:e/:e!```|Atualiza o arquivo, caso tenha sido modificado enquanto aberto.|
+|```:X```|Criptografa o arquivo.|
+|```:shell```|Saída temporária para o shell, retorna com ctrl+d.|
+|```:x,y mov z```|Move as linhas x e y para a linha z.|
+|```:h```|Abre o manual de ajuda do Vim.|
 
 Identação
     
