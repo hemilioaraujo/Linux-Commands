@@ -23,6 +23,7 @@
 |```clear```|Clear the terminal screen.|
 |```Ctrl + l```|Clear the terminal screen.|
 |```exit```|Close the terminal.|
+|```ctrl + c```|Terminates an application currently running in the terminal|
 
 ## File and directory manipulation
 
