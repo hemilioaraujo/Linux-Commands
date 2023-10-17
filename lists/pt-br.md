@@ -27,6 +27,7 @@
 |```clear```|Limpa a tela do terminal.|
 |```Ctrl + l```|Limpa a tela do terminal.|
 |```exit```|Fecha o terminal.|
+|```ctrl + c```|Encerra o processo que está sendo executado no terminal|
 
 ## Manipulação de arquivos e diretórios
 
