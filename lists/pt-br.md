@@ -207,6 +207,8 @@ Tais comandos possuem algumas diferenças no algoritimo, o que influencia na vel
 
 ## Permissões
 
+### Formato Numérico Octal
+
 |Comando|Descrição|
 |------|------|
 |```chmod xxx <arquivo or diretório>```|Altera as permissões do usuário, grupo ou todos para ler, escrever ou executar o arquivo.|
@@ -230,6 +232,48 @@ Este comando usa uma string para representar as permissões.
 |```chmod 222 <arquivo>```|Todos podem escrever no arquivo.|
 |```chmod 700 <arquivo>```|Somente o dono do arquivo tem todas as permissões.|
 |```chmod 600 <arquivo>```|O dono do arquivo pode ler e escrever.|
+
+### Formato Simbólico
+
+|Comando|Descrição|
+|------|------|
+|```chmod [u g o a] {+ - =} {r w x} <arquivo>```|Altera as permissões do usuário, grupo ou todos para ler, escrever ou executar o arquivo.|
+
+**[u g o a]**
+
+* __( u )__ para indicar mudança para o dono do arquivo.
+
+* __( g )__ para indicar mudança para o grupo do dono.
+
+* __( o )__ para indicar mudança para outros usuários.
+
+* __( a )__ para todos.
+
+Se não for digitado nenhuma letra será assumido "a".
+
+**{+ - =}**
+
+* __( + )__ para adicionar uma permissão.
+
+* __( - )__ para remover uma permissão.
+
+* __( = )__ para subistiuir as permisões pela a indicada.
+
+**{r w x}**
+
+* __( r )__ permissão de leitura.
+
+* __( w )__ permissão de gravação.
+
+* __( x )__ permissão executar um arquivo ou entrar em um diretório.
+
+### Exemplo
+
+|Comando|Descrição|
+|------|------|
+|```chmod u+r <arquivo>```|Foi adicionado a permssão leitura ao dono no arquivo.|
+|```chmod u-r <arquivo>```|Foi retirado a permssão leitura ao dono no arquivo.|
+|```chmod u=r <arquivo>```|Todas as permissões foram subtituidas pela a informada ao dono.|
 
 ## Variedades
 
@@ -516,9 +560,12 @@ Clipboard
 |------|------|
 |```x```|Deletar caractere.|
 |```dd```|Recortar/deletar linha.|
+|```dN```|Recortar/deletar a linha do cursor e mais n abaixo. Substitua N por um número.|
 |```yy```|Copiar linha.|
+|```yN```|Copiar linhas do cursor e mais n abaixo. Substitua N por um número.|
 |```p```|Colar.|
 |```P```|Colar antes.|
+|```u```|Recupera linha apagada.|
 
 Pesquisa
 |Comando|Descrição|
@@ -543,6 +590,10 @@ Lista de operadores
 |```gu```|Caixa baixa.|
 |```:!<cmd>```|Executa um comando externo.|
 |```:e/:e!```|Atualiza o arquivo, caso tenha sido modificado enquanto aberto.|
+|```:X```|Criptografa o arquivo.|
+|```:shell```|Saída temporária para o shell, retorna com ctrl+d.|
+|```:x,y mov z```|Move as linhas x e y para a linha z.|
+|```:h```|Abre o manual de ajuda do Vim.|
 
 Identação
     
