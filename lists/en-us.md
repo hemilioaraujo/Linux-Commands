@@ -141,14 +141,14 @@ This command uses a string that represents the permissions.
 |```ssh```|OpenSSH SSH client (remote access).|
 |```base64```|Base64 encodes / decodes the FILE, or standard input, to standard output.|
 
-## Monitoramento
+## Monitoring
 
 |Command|Description|
 |------|------|
 |```htop```|Displays processes running on the system.|
 |```vmstat```|Information about processes, memory, paging, block I / O, traps, disks and CPU activity.|
 |```free```|Watch and monitor system memory usage.|
-
+|```stat <file\|directory>```|Prints the given file or directory INode informations.|
 
 ## Packet manager (apt-get)
 
