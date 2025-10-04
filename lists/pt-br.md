@@ -309,6 +309,7 @@ Se não for digitado nenhuma letra será assumido "a".
 |```unalias```|Remove um alias ativo.|
 |```ip -br a```|Qual o meu IP na minha rede local? Este comando exibe o IP na rede local de cada placa de rede usando o novo pacote de rede do linux (iproute2util) |
 |```ifconfig```|Qual o meu IP na minha rede local? Este comando exibe o IP (e também algumas outras informações) na rede local de cada placa de rede porém usando o pacote antigo de reded do linux (net-tools), caso queria ver apenas o IP de placas de rede sem fio você pode usar o "iwconfig"  |
+|```wall```|o comando "wall" (write all) é um utilitário de linha de comando nativo do Linux, sendo uma ferramenta padrão para enviar mensagens para todos os usuários conectados ao sistema em seus terminais, ou seja, é possível enviar uma mensagem para todos os usuário online no servidor |
 
 ## Monitoramento
     
